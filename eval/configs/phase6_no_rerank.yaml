@@ -1,0 +1,18 @@
+# Phase 6 variant A: no reranking
+name: phase6_no_rerank
+description: "Phase 6 — no reranking; best top-k from Phase 5"
+
+chunking:
+  size: 512    # placeholder — update with best chunk size from Phase 2
+  overlap: 100
+
+embedding:
+  model: text-embedding-ada-002  # placeholder — update with best embedding from Phase 3
+
+retrieval:
+  method: vector  # placeholder — update with best search method from Phase 4
+  top_k: 5        # placeholder — update with best top-k from Phase 5
+  hybrid_alpha: null
+
+metadata_filter: true
+reranking: false

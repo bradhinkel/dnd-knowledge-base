@@ -1,0 +1,2640 @@
+{
+  "summary": {
+    "config": "phase5_top10",
+    "config_path": "eval/configs/phase5_top10.yaml",
+    "num_questions": 87,
+    "retrieval": {
+      "avg_precision_at_k": 0.3247,
+      "avg_recall_at_k": 0.8642,
+      "avg_mrr": 0.8415,
+      "avg_ndcg_at_k": 1.728
+    },
+    "generation": {
+      "avg_faithfulness": 0.919,
+      "avg_answer_relevancy": 0.8829,
+      "avg_context_relevancy": 0.8526
+    },
+    "timing": {
+      "avg_embed_ms": 23.4253,
+      "avg_retrieve_ms": 608.7276,
+      "avg_generation_ms": 2261.4805,
+      "avg_e2e_ms": 2893.8069
+    },
+    "tokens": {
+      "total_input": 347504,
+      "total_output": 10800
+    }
+  },
+  "results": [
+    {
+      "id": "W001",
+      "category": "weapon",
+      "type": "factual_lookup",
+      "question": "What is the rarity of the Mindrender Scythe?",
+      "ground_truth": "The Mindrender Scythe is a Legendary rarity weapon.",
+      "generated_answer": "According to the provided context, the Mindrender Scythe is **Legendary** rarity.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 342.0,
+        "retrieve_ms": 2404.3,
+        "generation_ms": 924.8,
+        "e2e_ms": 3671.2
+      },
+      "tokens": {
+        "input": 2916,
+        "output": 25
+      }
+    },
+    {
+      "id": "W002",
+      "category": "weapon",
+      "type": "factual_lookup",
+      "question": "Does the Wishbringer's Knife require attunement?",
+      "ground_truth": "No, the Wishbringer's Knife does not require attunement.",
+      "generated_answer": "No, the Wishbringer's Knife does not require attunement. According to the provided context, \"Requires Attunement: No.\"",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 23.0,
+        "retrieve_ms": 535.1,
+        "generation_ms": 1049.6,
+        "e2e_ms": 1607.8
+      },
+      "tokens": {
+        "input": 3461,
+        "output": 36
+      }
+    },
+    {
+      "id": "W003",
+      "category": "weapon",
+      "type": "factual_lookup",
+      "question": "What special ability does the Wishbringer's Knife have?",
+      "ground_truth": "The Wishbringer's Knife has the Wish Enaction ability.",
+      "generated_answer": "According to the provided context, the Wishbringer's Knife has the special ability **Wish Enaction**. \n\nOn a wound, you may use an action to expend 1 charge and cast the *Wish* spell. The weapon loses all magical properties when the last charge is used.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 23.5,
+        "retrieve_ms": 478.5,
+        "generation_ms": 1718.6,
+        "e2e_ms": 2220.8
+      },
+      "tokens": {
+        "input": 3080,
+        "output": 69
+      }
+    },
+    {
+      "id": "W004",
+      "category": "weapon",
+      "type": "factual_lookup",
+      "question": "What type of weapon is the Mindrender Scythe?",
+      "ground_truth": "The Mindrender Scythe is a Longsword.",
+      "generated_answer": "According to the provided context, the Mindrender Scythe is a **Longsword**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 22.7,
+        "retrieve_ms": 562.1,
+        "generation_ms": 857.7,
+        "e2e_ms": 1442.7
+      },
+      "tokens": {
+        "input": 3076,
+        "output": 25
+      }
+    },
+    {
+      "id": "W005",
+      "category": "weapon",
+      "type": "factual_lookup",
+      "question": "Who commissioned the Courier's Arrow?",
+      "ground_truth": "The Courier's Arrow was commissioned by the Harpers.",
+      "generated_answer": "According to the context provided, the Courier's Arrow was commissioned by **the Harpers**. This is indicated by the small brass plaque marking it as a Harper-commissioned piece, and the lore states that \"The Harpers commissioned these bows to keep their network connected across the Sword Coast without exposing couriers to danger.\"",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 21.6,
+        "retrieve_ms": 808.8,
+        "generation_ms": 1670.7,
+        "e2e_ms": 2501.3
+      },
+      "tokens": {
+        "input": 2802,
+        "output": 75
+      }
+    },
+    {
+      "id": "W006",
+      "category": "weapon",
+      "type": "factual_lookup",
+      "question": "What faction is associated with the Fang of Transformation?",
+      "ground_truth": "The Fang of Transformation is associated with the Emerald Enclave.",
+      "generated_answer": "According to the provided context, the **Emerald Enclave** is the faction associated with the Fang of Transformation. The lore states that the blade was \"Crafted by the Emerald Enclave druids in the High Forest.\"",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 18.5,
+        "retrieve_ms": 592.8,
+        "generation_ms": 1059.1,
+        "e2e_ms": 1670.5
+      },
+      "tokens": {
+        "input": 3182,
+        "output": 58
+      }
+    },
+    {
+      "id": "W007",
+      "category": "weapon",
+      "type": "factual_lookup",
+      "question": "What is the rarity of the Fang of Transformation?",
+      "ground_truth": "The Fang of Transformation is an Uncommon rarity weapon.",
+      "generated_answer": "According to the provided context, the Fang of Transformation is **Uncommon** rarity.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 16.7,
+        "retrieve_ms": 494.4,
+        "generation_ms": 767.6,
+        "e2e_ms": 1278.8
+      },
+      "tokens": {
+        "input": 3183,
+        "output": 25
+      }
+    },
+    {
+      "id": "W008",
+      "category": "weapon",
+      "type": "factual_lookup",
+      "question": "What special property does the Aetherium Blade have?",
+      "ground_truth": "The Aetherium Blade has the Spell Ward property.",
+      "generated_answer": "According to the provided context, the Aetherium Blade has the following special property:\n\n**Spell Ward** \u2014 You have advantage on saving throws against spells, and spell attacks made against you have disadvantage.\n\nAdditionally, it provides a +1 bonus to attack rolls and damage rolls.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 16.7,
+        "retrieve_ms": 488.8,
+        "generation_ms": 1612.1,
+        "e2e_ms": 2117.9
+      },
+      "tokens": {
+        "input": 3343,
+        "output": 67
+      }
+    },
+    {
+      "id": "W009",
+      "category": "weapon",
+      "type": "factual_lookup",
+      "question": "What type of weapon is the Aetherium Blade?",
+      "ground_truth": "The Aetherium Blade is a Longsword.",
+      "generated_answer": "According to the provided context, the Aetherium Blade is a **Longsword**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 19.1,
+        "retrieve_ms": 636.6,
+        "generation_ms": 831.7,
+        "e2e_ms": 1487.5
+      },
+      "tokens": {
+        "input": 3360,
+        "output": 25
+      }
+    },
+    {
+      "id": "W010",
+      "category": "weapon",
+      "type": "comparison",
+      "question": "Which is rarer: the Courier's Arrow or the Fang of Transformation?",
+      "ground_truth": "Both the Courier's Arrow and the Fang of Transformation are Uncommon rarity, making them equally rare.",
+      "generated_answer": "According to the provided context, the **Courier's Arrow** is rarer.\n\nThe Courier's Arrow has a rarity of **Uncommon**, while the Fang of Transformation also has a rarity of **Uncommon**\u2014they are actually the same rarity level.\n\nHowever, I must correct my answer: they are **equally rare**, both being Uncommon rarity items. Neither is rarer than the other based on the context provided.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 17.9,
+        "retrieve_ms": 652.9,
+        "generation_ms": 2291.0,
+        "e2e_ms": 2962.0
+      },
+      "tokens": {
+        "input": 2857,
+        "output": 102
+      }
+    },
+    {
+      "id": "W011",
+      "category": "weapon",
+      "type": "comparison",
+      "question": "Compare the Mindrender Scythe and the Wishbringer's Knife in terms of rarity and attunement.",
+      "ground_truth": "Both the Mindrender Scythe and the Wishbringer's Knife are Legendary rarity. The Mindrender Scythe requires no attunement; the Wishbringer's Knife also does not require attunement.",
+      "generated_answer": "Based on the provided context:\n\n**Rarity:** Both the Mindrender Scythe and the Wishbringer's Knife are **Legendary** rarity items.\n\n**Attunement:** Both weapons **do not require attunement** (Requires Attunement: No for both).\n\nIn summary, these two items are identical in terms of rarity and attunement requirements\u2014both are Legendary weapons that do not need attunement to use.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 23.5,
+        "retrieve_ms": 605.3,
+        "generation_ms": 1510.1,
+        "e2e_ms": 2139.1
+      },
+      "tokens": {
+        "input": 2615,
+        "output": 106
+      }
+    },
+    {
+      "id": "W012",
+      "category": "weapon",
+      "type": "relationship",
+      "question": "Which weapons in the compendium are associated with a faction or organization?",
+      "ground_truth": "The Courier's Arrow is associated with the Harpers, and the Fang of Transformation is associated with the Emerald Enclave.",
+      "generated_answer": "Based on the provided context, the following weapons are associated with a faction or organization:\n\n1. **Warden's Flail** \u2014 Issued to the City Watch of Baldur's Gate and requires attunement by City Watch or Order of the Gauntlet members.\n\n2. **Margot and Tam's Club and Hand Axe** \u2014 Belonged to Margot and Tam Corwell, legendary proprietors of the Wayward Wyvern in Baldur's Gate.\n\n3. **Venom Fang Warhammer** \u2014 Created by a demon cult, seized by monster hunters, and donated to the Order of the Gauntlet.\n\n4. **Unifying Blade** \u2014 Forged by the Lords' Alliance as a symbol of unity and cooperation.\n\n5. **Fang of Transformation** \u2014 Crafted by the Emerald Enclave druids in the High Forest.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 0.5,
+        "mrr": 0.1,
+        "ndcg_at_k": 0.1772
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.5,
+        "context_relevancy": 0.6
+      },
+      "timing": {
+        "embed_ms": 19.5,
+        "retrieve_ms": 528.0,
+        "generation_ms": 2451.4,
+        "e2e_ms": 2999.0
+      },
+      "tokens": {
+        "input": 2691,
+        "output": 210
+      }
+    },
+    {
+      "id": "W013",
+      "category": "weapon",
+      "type": "negative",
+      "question": "Is there a weapon called the Shadowbane Crossbow in the compendium?",
+      "ground_truth": "There is no weapon called the Shadowbane Crossbow in the compendium.",
+      "generated_answer": "No, there is no weapon called the Shadowbane Crossbow in the provided compendium. The crossbows listed are:\n\n1. Poisontalon Crossbow\n2. Piercing Crossbow\n3. The Poisoner's Crossbow\n4. Requiem's Judgment\n\nNone of these match the name \"Shadowbane Crossbow.\"",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": null,
+        "recall_at_k": null,
+        "mrr": null,
+        "ndcg_at_k": null
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 15.0,
+        "retrieve_ms": 540.9,
+        "generation_ms": 1597.3,
+        "e2e_ms": 2153.4
+      },
+      "tokens": {
+        "input": 3257,
+        "output": 88
+      }
+    },
+    {
+      "id": "W014",
+      "category": "weapon",
+      "type": "generation_prompt",
+      "question": "Describe the Aetherium Blade and how it might be used in a campaign encounter.",
+      "ground_truth": "The Aetherium Blade is a Very Rare Longsword with the Spell Ward property, making it particularly effective against spellcasters. In an encounter, it could be used by a fighter facing a mage to negate or reduce incoming spell damage.",
+      "generated_answer": "# The Aetherium Blade\n\n## Description\n\nThe Aetherium Blade is a very rare longsword forged from polished mithril. Its blade flickers between solid and translucent states, with soft blue light running along its edge, and it hums softly with arcane power.\n\n## Properties & Abilities\n\n- **Attack Bonus:** +1 to attack rolls and damage rolls\n- **Spell Ward (Special Ability):** The wielder gains advantage on saving throws against spells, and spell attacks made against them have disadvantage\n\n## Lore\n\nThe blade was created by one of Elminster's students specifically to protect mages from magical assault. It has a history of protecting Candlekeep scholars and is currently rumored to rest in a Waterdeep collector's vault.\n\n## Campaign Use\n\nThe Aetherium Blade would be particularly effective in encounters involving enemy spellcasters. A wielder equipped with this weapon gains significant defensive advantages against magical threats\u2014both through improved saves against spells and by making enemy spell attacks less accurate. This makes it an excellent choice for:\n\n- Protecting a party against mage-heavy encounters\n- Equipping a martial character who needs to close distance with hostile spellcasters\n- Defending NPCs or objectives from magical assault\n\nThe weapon's history also provides rich roleplay opportunities tied to Candlekeep or Waterdeep locations.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 0.95,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 19.4,
+        "retrieve_ms": 500.3,
+        "generation_ms": 4802.9,
+        "e2e_ms": 5322.7
+      },
+      "tokens": {
+        "input": 3100,
+        "output": 315
+      }
+    },
+    {
+      "id": "W015",
+      "category": "weapon",
+      "type": "multi_hop",
+      "question": "What faction weapon would a member of the Emerald Enclave most likely carry, and what is its rarity?",
+      "ground_truth": "A member of the Emerald Enclave would most likely carry the Fang of Transformation, which is Uncommon rarity.",
+      "generated_answer": "Based on the provided context, I cannot answer this question explicitly. \n\nWhile the context includes a \"Sword of the Emerald Forest\" that is described as preferred for \"druids and rangers\" and embodies \"the wild power of untamed nature,\" there is no mention of the Emerald Enclave as a faction in any of the provided item descriptions or lore.\n\nTo accurately answer what faction weapon a member of the Emerald Enclave would most likely carry, I would need context that specifically references the Emerald Enclave and their associated weapons.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.0,
+        "context_relevancy": 0.0
+      },
+      "timing": {
+        "embed_ms": 18.2,
+        "retrieve_ms": 767.0,
+        "generation_ms": 1783.3,
+        "e2e_ms": 2568.7
+      },
+      "tokens": {
+        "input": 3048,
+        "output": 124
+      }
+    },
+    {
+      "id": "W016",
+      "category": "weapon",
+      "type": "factual_lookup",
+      "question": "What is the rarity of the Courier's Arrow?",
+      "ground_truth": "The Courier's Arrow is an Uncommon rarity weapon.",
+      "generated_answer": "According to the provided context, the Courier's Arrow is **Uncommon** rarity.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 23.3,
+        "retrieve_ms": 528.4,
+        "generation_ms": 843.6,
+        "e2e_ms": 1395.5
+      },
+      "tokens": {
+        "input": 2583,
+        "output": 23
+      }
+    },
+    {
+      "id": "W017",
+      "category": "weapon",
+      "type": "factual_lookup",
+      "question": "What is the rarity of the Aetherium Blade?",
+      "ground_truth": "The Aetherium Blade is a Very Rare weapon.",
+      "generated_answer": "According to the provided context, the Aetherium Blade is **Very Rare** in rarity.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 19.4,
+        "retrieve_ms": 656.3,
+        "generation_ms": 888.3,
+        "e2e_ms": 1564.1
+      },
+      "tokens": {
+        "input": 2938,
+        "output": 27
+      }
+    },
+    {
+      "id": "N001",
+      "category": "npc",
+      "type": "factual_lookup",
+      "question": "What is Alustriel Silverhand's title or role?",
+      "ground_truth": "Alustriel Silverhand is the Lady of Silverymoon.",
+      "generated_answer": "Based on the provided context, Alustriel Silverhand's title is **Lady of Silverymoon**, and her role is the **ruler of Silverymoon**. \n\nThe context also notes that she is one of the legendary Seven Sisters, a Chosen of Mystra, and a Harper ally, but her primary title and role is Lady of Silverymoon.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.3,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.1309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 22.3,
+        "retrieve_ms": 650.0,
+        "generation_ms": 3475.1,
+        "e2e_ms": 4147.6
+      },
+      "tokens": {
+        "input": 4661,
+        "output": 85
+      }
+    },
+    {
+      "id": "N002",
+      "category": "npc",
+      "type": "factual_lookup",
+      "question": "What organization is Alustriel Silverhand allied with?",
+      "ground_truth": "Alustriel Silverhand is a Harper ally.",
+      "generated_answer": "According to the context provided, Alustriel Silverhand is allied with:\n\n1. **The Harpers** - described as a \"Harper ally\"\n2. **Mystra** - she is a \"Chosen of Mystra,\" which is a divine affiliation rather than an organization in the traditional sense\n\nHer primary affiliation is as **Lady of Silverymoon**, where she serves as the ruler of that city-state.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.3,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.1309
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 0.9,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 19.2,
+        "retrieve_ms": 519.4,
+        "generation_ms": 1646.4,
+        "e2e_ms": 2185.3
+      },
+      "tokens": {
+        "input": 4648,
+        "output": 99
+      }
+    },
+    {
+      "id": "N003",
+      "category": "npc",
+      "type": "factual_lookup",
+      "question": "What divine connection does Alustriel Silverhand have?",
+      "ground_truth": "Alustriel Silverhand is a Chosen of Mystra.",
+      "generated_answer": "Based on the provided context, Alustriel Silverhand is a Chosen of Mystra. As a Chosen of Mystra, she carries the silver fire of the goddess within her\u2014a power she reveals only in extremis. This divine connection grants her a constitution that borders on supernatural endurance and immunity to a suite of dangerous spells.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.3,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.1309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 14.6,
+        "retrieve_ms": 485.5,
+        "generation_ms": 1872.2,
+        "e2e_ms": 2372.5
+      },
+      "tokens": {
+        "input": 4319,
+        "output": 78
+      }
+    },
+    {
+      "id": "N004",
+      "category": "npc",
+      "type": "factual_lookup",
+      "question": "What organization does Arilyn Moonblade work for?",
+      "ground_truth": "Arilyn Moonblade is a Harpers operative.",
+      "generated_answer": "According to the context, Arilyn Moonblade is a **Harper operative**. She works for the Harpers, though the context notes that this affiliation comes with \"complicated loyalties.\"",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.3,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.1309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 21.7,
+        "retrieve_ms": 548.8,
+        "generation_ms": 1055.1,
+        "e2e_ms": 1625.8
+      },
+      "tokens": {
+        "input": 3746,
+        "output": 45
+      }
+    },
+    {
+      "id": "N005",
+      "category": "npc",
+      "type": "factual_lookup",
+      "question": "Who does Artemis Entreri serve?",
+      "ground_truth": "Artemis Entreri serves Pasha Pook's guilds.",
+      "generated_answer": "Based on the provided context, Artemis Entreri is currently **independent**. \n\nThe context states under \"Affiliation\": \"Formerly Pasha Pook's thieves' and assassins' guilds of Calimport; briefly allied with Bregan D'aerthe (drow mercenaries); currently independent.\"\n\nSo while he previously served Pasha Pook's guild and temporarily allied with Bregan D'aerthe, he does not currently serve anyone.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.5616
+      },
+      "generation_scores": {
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.3,
+        "context_relevancy": 0.9
+      },
+      "timing": {
+        "embed_ms": 20.1,
+        "retrieve_ms": 583.7,
+        "generation_ms": 2240.6,
+        "e2e_ms": 2844.5
+      },
+      "tokens": {
+        "input": 3712,
+        "output": 110
+      }
+    },
+    {
+      "id": "N006",
+      "category": "npc",
+      "type": "comparison",
+      "question": "What is the difference in allegiance between Arilyn Moonblade and Artemis Entreri?",
+      "ground_truth": "Arilyn Moonblade works for the Harpers, a heroic organization, while Artemis Entreri serves Pasha Pook's criminal guilds.",
+      "generated_answer": "Based on the provided context:\n\n**Arilyn Moonblade's Allegiance:** She is a Harper operative. The context notes she works \"initially as a Harper operative, with the complicated loyalties that entails,\" though she is ultimately \"a woman who does good because she chooses to, not because she was trained to.\"\n\n**Artemis Entreri's Allegiance:** He is currently independent. The context states his affiliation is \"Formerly Pasha Pook's thieves' and assassins' guilds of Calimport; briefly allied with Bregan D'aerthe (drow mercenaries); currently independent.\"\n\n**The Difference:** Arilyn maintains an official affiliation with the Harpers, an organization dedicated to protecting the innocent and exposing corruption. Artemis, by contrast, has no current organizational allegiance and operates as an independent agent\u2014a professional killer and skilled fighter who takes contracts and works for himself rather than serving any guild or faction.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.7,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.2306
+      },
+      "generation_scores": {
+        "faithfulness": 0.85,
+        "answer_relevancy": 0.9,
+        "context_relevancy": 0.75
+      },
+      "timing": {
+        "embed_ms": 23.6,
+        "retrieve_ms": 555.3,
+        "generation_ms": 2758.3,
+        "e2e_ms": 3337.4
+      },
+      "tokens": {
+        "input": 3819,
+        "output": 216
+      }
+    },
+    {
+      "id": "N007",
+      "category": "npc",
+      "type": "relationship",
+      "question": "Which NPCs in the compendium have ties to the Harpers?",
+      "ground_truth": "Alustriel Silverhand is a Harper ally and Arilyn Moonblade is a Harpers operative.",
+      "generated_answer": "Based on the provided context, the following NPCs have ties to the Harpers:\n\n1. **Arilyn** - Listed as a Harper operative. She has Harper connections that provide access to intelligence networks throughout the Heartlands and carries a Harper pin.\n\n2. **Artus** - Has Harper affiliation. He is described as having Harper contacts throughout the Heartlands, carries a Harper pin, and does Harper work openly.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 0.5,
+        "mrr": 1.0,
+        "ndcg_at_k": 0.8175
+      },
+      "generation_scores": {
+        "faithfulness": 0.5,
+        "answer_relevancy": 0.6,
+        "context_relevancy": 0.7
+      },
+      "timing": {
+        "embed_ms": 17.4,
+        "retrieve_ms": 1634.1,
+        "generation_ms": 1575.0,
+        "e2e_ms": 3226.8
+      },
+      "tokens": {
+        "input": 2656,
+        "output": 95
+      }
+    },
+    {
+      "id": "N008",
+      "category": "npc",
+      "type": "multi_hop",
+      "question": "Who governs Silverymoon, and what deity do they have a connection to?",
+      "ground_truth": "Alustriel Silverhand governs Silverymoon as Lady of Silverymoon. She is a Chosen of Mystra, the goddess of magic.",
+      "generated_answer": "Based on the provided context:\n\n**Alustriel Silverhand** governs Silverymoon as its Lady and ruler.\n\nShe has a connection to **Mystra**, the goddess of magic. Alustriel is a Chosen of Mystra and carries the silver fire of the goddess within her\u2014a divine power she reveals only in extreme circumstances.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.3,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.3066
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 23.7,
+        "retrieve_ms": 513.2,
+        "generation_ms": 1473.3,
+        "e2e_ms": 2010.3
+      },
+      "tokens": {
+        "input": 3961,
+        "output": 82
+      }
+    },
+    {
+      "id": "N009",
+      "category": "npc",
+      "type": "negative",
+      "question": "Is there an NPC named Drizzt Do'Urden in the compendium?",
+      "ground_truth": "There is no NPC named Drizzt Do'Urden listed in the compendium.",
+      "generated_answer": "Yes, there is an NPC named Drizzt Do'Urden in the compendium. He is referenced extensively throughout the provided context as a drow ranger who has a long and defining rivalry with Artemis Entreri. Drizzt is also described as a closest companion to both Bruenor Battlehammer and Catti-brie, and he is mentioned in multiple encounter hooks and relationship descriptions.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": null,
+        "recall_at_k": null,
+        "mrr": null,
+        "ndcg_at_k": null
+      },
+      "generation_scores": {
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.0,
+        "context_relevancy": 0.5
+      },
+      "timing": {
+        "embed_ms": 15.7,
+        "retrieve_ms": 646.8,
+        "generation_ms": 1764.9,
+        "e2e_ms": 2427.5
+      },
+      "tokens": {
+        "input": 3962,
+        "output": 95
+      }
+    },
+    {
+      "id": "N010",
+      "category": "npc",
+      "type": "generation_prompt",
+      "question": "Describe Artemis Entreri and how a DM might use him as an antagonist in a campaign.",
+      "ground_truth": "Artemis Entreri is a deadly assassin who serves Pasha Pook's criminal guilds. A DM might use him as a hired killer sent after the party, or as a morally complex anti-hero whose skills rival any fighter in combat.",
+      "generated_answer": "# Artemis Entreri: Description and Use as an Antagonist\n\n## Character Description\n\nArtemis Entreri is a small, compact man of wiry muscle with angular features, striking high cheekbones, and raven black hair. Despite being clean-shaven, he always appears to need a shave. His most distinctive feature is his gray, lifeless eyes that betray the emptiness of his soul. He moves with the controlled economy of a professional killer and dresses practically.\n\nAs a personality, Artemis is the consummate professional\u2014every move and word is calculated to achieve a desired effect. He maintains absolute control over his emotions regardless of circumstances, and he relentlessly maintains himself in top physical condition while constantly improving his martial skills. Notably, he is terribly cunning and able to outthink opponents as well as outfight them. Despite his profession as a killer, he never kills unless necessary\u2014a rare professionalism in his line of work.\n\n## Abilities\n\nArtemis is one of the most dangerous swordsmen in the Realms, combining ambidexterity, thieving training, and warrior skills at the highest level. He can make 5 attacks per round at peak efficiency. His signature weapon is the +4 dagger \"the Defender\" (a life-stealer), and he carries a +1 sword of wounding. He also wears a +4 cloak of protection and a +2 ring of protection.\n\n## Using Him as an Antagonist\n\n**Combat Approach:** Artemis is an elite mobile skirmisher and assassin who fights with terrifying speed and efficiency. He taunts opponents into rage and mistakes, learns from every combat encounter, and creates tactical advantages before striking rather than reacting.\n\n**Encounter Hooks:**\n- The party is hired to find a missing halfling broker in Calimport whose last known contact was with Artemis Entreri\u2014and asking about him tends to attract dangerous attention\n- Artemis approaches the party with a professional offer: he needs a task accomplished that requires people who can move in daylight without attracting his kind of attention, making refusal feel strategically unwise\n\n**Key Psychological Angle:** Artemis is obsessively focused on his rivalry with Drizzt Do'Urden, viewing him as his archenemy and",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.5616
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 0.92,
+        "context_relevancy": 0.98
+      },
+      "timing": {
+        "embed_ms": 14.7,
+        "retrieve_ms": 592.6,
+        "generation_ms": 7655.7,
+        "e2e_ms": 8263.2
+      },
+      "tokens": {
+        "input": 4319,
+        "output": 512
+      }
+    },
+    {
+      "id": "N011",
+      "category": "npc",
+      "type": "factual_lookup",
+      "question": "What city is Alustriel Silverhand associated with?",
+      "ground_truth": "Alustriel Silverhand is associated with Silverymoon, where she serves as Lady of Silverymoon.",
+      "generated_answer": "According to the context, Alustriel Silverhand is associated with **Silverymoon**. She is the Lady of Silverymoon and has governed this city-state for generations, shaping it into a beacon of culture, learning, and safety for the north.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.3,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.1309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 17.4,
+        "retrieve_ms": 486.5,
+        "generation_ms": 1482.1,
+        "e2e_ms": 1986.2
+      },
+      "tokens": {
+        "input": 4719,
+        "output": 62
+      }
+    },
+    {
+      "id": "N012",
+      "category": "npc",
+      "type": "comparison",
+      "question": "Compare the roles of Alustriel Silverhand and Arilyn Moonblade in the Harpers.",
+      "ground_truth": "Alustriel Silverhand is a Harper ally who also governs Silverymoon; Arilyn Moonblade is a field operative of the Harpers who carries out missions directly.",
+      "generated_answer": "Based on the provided context:\n\n**Alustriel Silverhand** is a **Harper ally** - she maintains close ties with the Harpers but is not herself a member. Her primary role is as the Lady of Silverymoon, ruling a city-state, and she is a Chosen of Mystra. She provides support to Harper operations, such as the crucial magical aid and information she gave to Bruenor Battlehammer's companions.\n\n**Arilyn Moonblade** is a **Harper operative** - an active member working directly for the organization. She uses Harper connections to access intelligence networks throughout the Heartlands as part of her field operations.\n\nIn summary, Alustriel is an external ally who supports Harper efforts from her position of power in Silverymoon, while Arilyn is an internal operative actively carrying out Harper missions in the field.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.6,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.0262
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 0.95,
+        "context_relevancy": 0.9
+      },
+      "timing": {
+        "embed_ms": 14.3,
+        "retrieve_ms": 1331.1,
+        "generation_ms": 4558.9,
+        "e2e_ms": 5904.5
+      },
+      "tokens": {
+        "input": 4405,
+        "output": 193
+      }
+    },
+    {
+      "id": "N013",
+      "category": "npc",
+      "type": "relationship",
+      "question": "Which NPC has connections to criminal organizations?",
+      "ground_truth": "Artemis Entreri has connections to criminal organizations through his service to Pasha Pook's guilds.",
+      "generated_answer": "Based on the provided context, multiple NPCs have connections to criminal organizations:\n\n1. **Leif Vaelor** - According to the rumors section, he is working for at least three criminal organizations at once, and none of them know about the others.\n\n2. **Sarfiel** - He operates a counterfeiting workshop and is described as having had half the city watch on his payroll for years. He appears to be involved in document forgery and criminal networks.\n\n3. **Batesta** - Leads the assassins' guild and enforces rules within it.\n\n4. **Olivia** - While primarily running an orphanage, she has a history with the Crimson Wanderers adventuring company (which disbanded under unclear circumstances) and is involved in investigating trafficking rings.\n\n5. **The Thieves' Guild members** - Including those operating from two connected taverns, with various members like Samuz and Wolfsinger mentioned.\n\n6. **Beltru the Executioner** - Operates a fence network and provides city watch schedules to criminal clients.\n\n7. **Erica Schnell** - Has underworld contacts and connections, and the rumors suggest she may have been involved in a previous guild conflict (the Shadowveil Guild).\n\n8. **Scheidel** - Leads a warlock guild faction with internal political conflicts and external funding from unknown parties.\n\nThe most explicitly stated connection is **Leif Vaelor**, who openly works for three criminal organizations simultaneously.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0
+      },
+      "generation_scores": {
+        "faithfulness": 0.75,
+        "answer_relevancy": 0.85,
+        "context_relevancy": 0.45
+      },
+      "timing": {
+        "embed_ms": 19.5,
+        "retrieve_ms": 517.2,
+        "generation_ms": 5721.2,
+        "e2e_ms": 6258.0
+      },
+      "tokens": {
+        "input": 2209,
+        "output": 332
+      }
+    },
+    {
+      "id": "A001",
+      "category": "artifact",
+      "type": "factual_lookup",
+      "question": "What type of item is the Dawnrazor?",
+      "ground_truth": "The Dawnrazor is a Weapon of Legend, specifically a Longsword.",
+      "generated_answer": "According to the provided context, Dawnrazor is a **Longsword** (Item Subtype), and it is classified as a **Weapon of Legend** (Artifact Type) with **Legendary** rarity.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.5616
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 20.2,
+        "retrieve_ms": 585.9,
+        "generation_ms": 1198.6,
+        "e2e_ms": 1805.0
+      },
+      "tokens": {
+        "input": 4733,
+        "output": 53
+      }
+    },
+    {
+      "id": "A002",
+      "category": "artifact",
+      "type": "factual_lookup",
+      "question": "What is the rarity of the Dawnrazor?",
+      "ground_truth": "The Dawnrazor is Legendary rarity.",
+      "generated_answer": "According to the provided context, the rarity of Dawnrazor is **Legendary**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.5616
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 22.3,
+        "retrieve_ms": 583.8,
+        "generation_ms": 739.2,
+        "e2e_ms": 1345.5
+      },
+      "tokens": {
+        "input": 4795,
+        "output": 23
+      }
+    },
+    {
+      "id": "A003",
+      "category": "artifact",
+      "type": "factual_lookup",
+      "question": "What type of armor is the Nightmantle?",
+      "ground_truth": "The Nightmantle is Leather Armor.",
+      "generated_answer": "According to the context provided, Nightmantle is **leather armor**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.3,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.1309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 19.9,
+        "retrieve_ms": 572.8,
+        "generation_ms": 1723.1,
+        "e2e_ms": 2316.1
+      },
+      "tokens": {
+        "input": 5496,
+        "output": 18
+      }
+    },
+    {
+      "id": "A004",
+      "category": "artifact",
+      "type": "factual_lookup",
+      "question": "What class or character type is the Nightmantle designed for?",
+      "ground_truth": "The Nightmantle is designed for rogues and requires rogue attunement.",
+      "generated_answer": "Based on the context provided, the Nightmantle is designed for **rogues or creatures proficient in Stealth**.\n\nSpecifically, the attunement requirement states: \"Requires attunement by a rogue or a creature proficient in Stealth. Attunement must be performed in complete darkness.\"",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.3,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.1309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 20.4,
+        "retrieve_ms": 603.4,
+        "generation_ms": 1344.1,
+        "e2e_ms": 1968.2
+      },
+      "tokens": {
+        "input": 4820,
+        "output": 71
+      }
+    },
+    {
+      "id": "A005",
+      "category": "artifact",
+      "type": "factual_lookup",
+      "question": "Where is the Nightmantle associated with?",
+      "ground_truth": "The Nightmantle is associated with Waterdeep.",
+      "generated_answer": "Based on the provided context, the Nightmantle is associated with:\n\n1. **Waterdeep** - It was created there in 1369 DR by the Velvet Hand, a master thief and Shadow Thieves guildmaster.\n\n2. **The Shadow Thieves** - The organization claims Nightmantle is guild property and has standing orders to recover it.\n\n3. **Shar** - The armor was created using Sharran leather-working techniques and is considered by Shar to be a conduit for her influence.\n\n4. **Luskan** - The armor was last seen there in 1489 DR during a botched heist, where the thief wearing it escaped but has not been identified since.\n\nThe current location is otherwise unknown.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.3,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.1309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.85,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 22.5,
+        "retrieve_ms": 826.6,
+        "generation_ms": 2536.6,
+        "e2e_ms": 3385.9
+      },
+      "tokens": {
+        "input": 4285,
+        "output": 174
+      }
+    },
+    {
+      "id": "A006",
+      "category": "artifact",
+      "type": "factual_lookup",
+      "question": "Who created The Cartographer's Compass?",
+      "ground_truth": "The Cartographer's Compass was created by Vethila Starweaver.",
+      "generated_answer": "According to the provided context, **Vethila Starweaver**, a mad mage and planar theorist, created The Cartographer's Compass during the Spellplague of 1385 DR in Waterdeep.\n\nThe context also mentions that Vethila was the leader of \"a circle of mad mages in Waterdeep who sought to understand the reality-shattering cataclysm,\" though Vethila is identified as the primary creator who forged the compass using a crystallized fragment of planar essence extracted from a reality scar.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.5,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.9485
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 18.1,
+        "retrieve_ms": 675.3,
+        "generation_ms": 2541.7,
+        "e2e_ms": 3235.2
+      },
+      "tokens": {
+        "input": 4832,
+        "output": 130
+      }
+    },
+    {
+      "id": "A007",
+      "category": "artifact",
+      "type": "factual_lookup",
+      "question": "What is the rarity of The Cartographer's Compass?",
+      "ground_truth": "The Cartographer's Compass is Legendary rarity.",
+      "generated_answer": "According to the provided context, The Cartographer's Compass is **Legendary** rarity.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.5,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.9485
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 20.6,
+        "retrieve_ms": 591.9,
+        "generation_ms": 973.4,
+        "e2e_ms": 1586.1
+      },
+      "tokens": {
+        "input": 4964,
+        "output": 24
+      }
+    },
+    {
+      "id": "A008",
+      "category": "artifact",
+      "type": "factual_lookup",
+      "question": "During what historical event was The Cartographer's Compass made?",
+      "ground_truth": "The Cartographer's Compass was made during the Spellplague in 1385 DR.",
+      "generated_answer": "According to the provided context, The Cartographer's Compass was created during the **Spellplague of 1385 DR** in Waterdeep. The compass was forged by Vethila Starweaver and a circle of mad mages who sought to understand the reality-shattering cataclysm.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.5,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.9485
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 21.5,
+        "retrieve_ms": 625.2,
+        "generation_ms": 2602.1,
+        "e2e_ms": 3249.0
+      },
+      "tokens": {
+        "input": 4836,
+        "output": 76
+      }
+    },
+    {
+      "id": "A009",
+      "category": "artifact",
+      "type": "factual_lookup",
+      "question": "What type of item is Shar's Obsidian Mirror?",
+      "ground_truth": "Shar's Obsidian Mirror is a Relic.",
+      "generated_answer": "According to the context, Shar's Obsidian Mirror is a **Relic & Holy Symbol** that functions as a **Divination Focus (Mirror)**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.5616
+      },
+      "generation_scores": {
+        "faithfulness": 0.85,
+        "answer_relevancy": 0.75,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 20.8,
+        "retrieve_ms": 691.9,
+        "generation_ms": 1098.2,
+        "e2e_ms": 1811.0
+      },
+      "tokens": {
+        "input": 4928,
+        "output": 40
+      }
+    },
+    {
+      "id": "A010",
+      "category": "artifact",
+      "type": "factual_lookup",
+      "question": "What type of caster is Shar's Obsidian Mirror associated with?",
+      "ground_truth": "Shar's Obsidian Mirror is associated with shadow mages.",
+      "generated_answer": "Based on the provided context, Shar's Obsidian Mirror is associated with **shadow mages**. \n\nThe attunement requirements state that the mirror requires attunement by \"a worshipper of Shar, a shadow mage, or a creature willing to sacrifice something precious to the goddess.\"",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.5616
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 18.7,
+        "retrieve_ms": 553.4,
+        "generation_ms": 1467.0,
+        "e2e_ms": 2039.3
+      },
+      "tokens": {
+        "input": 5103,
+        "output": 70
+      }
+    },
+    {
+      "id": "A011",
+      "category": "artifact",
+      "type": "comparison",
+      "question": "Compare the Dawnrazor and Shar's Obsidian Mirror in terms of item type and rarity.",
+      "ground_truth": "The Dawnrazor is a Legendary Weapon of Legend (Longsword), while Shar's Obsidian Mirror is a Relic associated with shadow magic. Both are powerful but serve very different purposes.",
+      "generated_answer": "Based on the provided context:\n\n**Dawnrazor:**\n- Artifact Type: Weapon of Legend\n- Item Subtype: Longsword\n- Rarity: Legendary\n\n**Shar's Obsidian Mirror:**\n- Artifact Type: Relic & Holy Symbol\n- Item Subtype: Divination Focus (Mirror)\n- Rarity: Artifact\n\nIn terms of comparison, Dawnrazor is a legendary weapon (longsword), while Shar's Obsidian Mirror is an artifact-level divination focus. Both require attunement, but they serve different purposes\u2014one is a melee weapon designed for combat, and the other is a divination tool designed to reveal secrets.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.8,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.4241
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 22.3,
+        "retrieve_ms": 578.0,
+        "generation_ms": 2227.6,
+        "e2e_ms": 2828.0
+      },
+      "tokens": {
+        "input": 4978,
+        "output": 166
+      }
+    },
+    {
+      "id": "A012",
+      "category": "artifact",
+      "type": "relationship",
+      "question": "Which artifacts in the compendium are associated with a specific city?",
+      "ground_truth": "The Nightmantle is associated with Waterdeep.",
+      "generated_answer": "Based on the provided context, the following artifacts are associated with specific cities:\n\n1. **The Atlas of Forgotten Doors** - Associated with **Waterdeep**. It is currently held by the Planar Trade Consortium in Waterdeep, and a cartographer claimed it showed a hidden city beneath Waterdeep that predates the current city.\n\n2. **The Cartographer's Compass** - Associated with **Baldur's Gate** and **Waterdeep**. It was last known to be in the possession of a scholar from the Candlekeep archives in Baldur's Gate, and it was created in Waterdeep during the Spellplague.\n\n3. **Tome of the Starry Veil** - Associated with **Neverwinter** and the **Spine of the World**. It is held in the Archives of the Astronomer's Guild in Neverwinter, or alternatively hidden in a high mountain observatory in the Spine of the World according to some legends.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0
+      },
+      "generation_scores": {
+        "faithfulness": 0.85,
+        "answer_relevancy": 0.9,
+        "context_relevancy": 0.75
+      },
+      "timing": {
+        "embed_ms": 19.3,
+        "retrieve_ms": 675.7,
+        "generation_ms": 2940.6,
+        "e2e_ms": 3635.7
+      },
+      "tokens": {
+        "input": 3916,
+        "output": 227
+      }
+    },
+    {
+      "id": "A013",
+      "category": "artifact",
+      "type": "multi_hop",
+      "question": "What legendary artifact was created during the Spellplague, and who made it?",
+      "ground_truth": "The Cartographer's Compass was created during the Spellplague in 1385 DR by Vethila Starweaver.",
+      "generated_answer": "Based on the provided context, the **Blackthorn Rod** was created during the Spellplague by **Kelgrim Blacksap**, a druid of Silvanus.\n\nAccording to the lore, Kelgrim attempted to restore a corrupted forest north of the High Forest, but his magic merged with the existing corruption, transforming him into something neither druid nor fiend \u2014 a druid of rot and decay. He then spent three years cultivating the Blackthorn Rod from a blighted oak that had been touched by the Spellplague itself, infusing it with his own life essence and the essence of every diseased plant he could find.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 1.0,
+        "mrr": 0.1667,
+        "ndcg_at_k": 0.3562
+      },
+      "generation_scores": {
+        "faithfulness": 0.0,
+        "answer_relevancy": 0.0,
+        "context_relevancy": 0.4
+      },
+      "timing": {
+        "embed_ms": 20.3,
+        "retrieve_ms": 589.7,
+        "generation_ms": 2488.0,
+        "e2e_ms": 3098.2
+      },
+      "tokens": {
+        "input": 4722,
+        "output": 149
+      }
+    },
+    {
+      "id": "A014",
+      "category": "artifact",
+      "type": "negative",
+      "question": "Is there an artifact called the Crown of Stars in the compendium?",
+      "ground_truth": "There is no artifact called the Crown of Stars in the compendium.",
+      "generated_answer": "Based on the provided context, there is no artifact called the \"Crown of Stars\" in this compendium.\n\nThe context includes several star-themed artifacts:\n- Crown of the Sleeping King\n- Diadem of the Stars\n- Tome of the Starry Veil\n- Talisman of the Wandering Star\n\nHowever, none of these are named \"Crown of Stars.\"",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": null,
+        "recall_at_k": null,
+        "mrr": null,
+        "ndcg_at_k": null
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 19.7,
+        "retrieve_ms": 578.8,
+        "generation_ms": 1466.4,
+        "e2e_ms": 2065.0
+      },
+      "tokens": {
+        "input": 4862,
+        "output": 90
+      }
+    },
+    {
+      "id": "A015",
+      "category": "artifact",
+      "type": "generation_prompt",
+      "question": "Describe The Cartographer's Compass and how a DM might introduce it as a quest item.",
+      "ground_truth": "The Cartographer's Compass is a Legendary Wondrous Item created by Vethila Starweaver during the Spellplague. A DM might introduce it as a lost navigation tool that can find paths through magically corrupted terrain, making it a coveted item sought by scholars and adventurers alike.",
+      "generated_answer": "# The Cartographer's Compass\n\n## Description\n\nThe Cartographer's Compass is a legendary wondrous item created by Vethila Starweaver, a mad mage and planar theorist, during the Spellplague of 1385 DR in Waterdeep. It is an ornate brass compass approximately three inches in diameter, with a face inlaid with silver and gold symbols representing all known planes of existence. Rather than a magnetic needle, it features a shard of solidified planar essence that shifts through all colors of the spectrum. The compass case is engraved with cartographic symbols from extinct civilizations across Faer\u00fbn. When held, it is warm to the touch and can cause faint geometric afterimages in the wearer's vision. The back plate bears an inscription in Primordial: \"The world is but one thread in the tapestry infinite.\"\n\nThe compass always points toward the nearest planar rift, dimensional tear, or location where reality is unstable, rather than toward magnetic north.\n\n## How a DM Might Introduce It as a Quest Item\n\nThe context provides several encounter hooks:\n\n1. **Recovering from Archives**: An elderly student of Vethila Starweaver hires the party to recover the compass from the Candlekeep archives, believing it is the only tool capable of closing a rift slowly opening beneath the Library of Waterdeep for the past year.\n\n2. **Mysterious Death Investigation**: The party discovers the compass among the possessions of a scholar who died under mysterious circumstances, killed by something from beyond the Material Plane. The compass may be their only way to close the rift the creature came through.\n\n3. **Competing Factions**: A mercenary band working for the Zhentarim seeks the compass to locate and exploit planar rifts for treasure and extraplanar artifacts, forcing the party to decide whether to stop them or find the compass first.\n\n4. **Deceptive Entity Contact**: While using the compass, the wearer is contacted by a planar entity claiming it was stolen from them and offering great rewards for its return\u2014however, investigation reveals the entity is a predatory being that hunts planar travelers.\n\n5. **Immediate Crisis**: The compass begins indicating a massive, previously unknown rift forming beneath the party's current city, forcing them to",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.5,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.9485
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 0.98,
+        "context_relevancy": 0.99
+      },
+      "timing": {
+        "embed_ms": 17.8,
+        "retrieve_ms": 596.2,
+        "generation_ms": 7801.0,
+        "e2e_ms": 8415.2
+      },
+      "tokens": {
+        "input": 4957,
+        "output": 512
+      }
+    },
+    {
+      "id": "A016",
+      "category": "artifact",
+      "type": "comparison",
+      "question": "Which artifact would be more useful to a rogue: the Nightmantle or the Dawnrazor?",
+      "ground_truth": "The Nightmantle would be more useful to a rogue because it is Leather Armor that specifically requires rogue attunement, whereas the Dawnrazor is a Legendary Longsword more suited to fighters.",
+      "generated_answer": "Based on the provided context, **Nightmantle would be significantly more useful to a rogue**.\n\nHere's why:\n\n**Nightmantle is specifically designed for rogues:**\n- Its attunement requirement explicitly states it \"requires attunement by a rogue or a creature proficient in Stealth\"\n- It provides a +2 AC bonus with no maximum Dexterity modifier limit\n- It grants advantage on all Dexterity (Stealth) checks\n- It includes abilities like Shadow Step (teleportation), Cloak of Night (invisibility that doesn't break on attacks), and Pass Without Trace\u2014all core rogue capabilities\n\n**Dawnrazor is explicitly designed for a different purpose:**\n- Its attunement requirement specifies \"a creature of good alignment who has witnessed a sunrise while holding the blade\"\n- It is described as a weapon \"against the encroaching shadow of Shar's faithful\" and for \"temple reclamations\"\n- Its powers (Dawn's Wrath, radiant damage to undead and fiends, light emission) are optimized for a holy warrior or cleric, not a rogue\n\nAdditionally, Nightmantle's consequences note that \"The Shadow Thieves claim Nightmantle is guild property,\" suggesting it has a strong connection to the thieving profession itself.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.7,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.2306
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 20.0,
+        "retrieve_ms": 600.8,
+        "generation_ms": 4552.5,
+        "e2e_ms": 5173.4
+      },
+      "tokens": {
+        "input": 4765,
+        "output": 297
+      }
+    },
+    {
+      "id": "A017",
+      "category": "artifact",
+      "type": "factual_lookup",
+      "question": "What category of item is The Cartographer's Compass?",
+      "ground_truth": "The Cartographer's Compass is a Wondrous Item.",
+      "generated_answer": "According to the provided context, The Cartographer's Compass is a **Wondrous Item** in the compass subtype category.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.5,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.9485
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 21.9,
+        "retrieve_ms": 665.9,
+        "generation_ms": 1032.0,
+        "e2e_ms": 1720.0
+      },
+      "tokens": {
+        "input": 4970,
+        "output": 32
+      }
+    },
+    {
+      "id": "L001",
+      "category": "location",
+      "type": "factual_lookup",
+      "question": "What is the approximate population of Waterdeep?",
+      "ground_truth": "Waterdeep has approximately 130,000 permanent residents.",
+      "generated_answer": "According to the provided context, Waterdeep has approximately **130,000 permanent residents**, which swells to **200,000+ during summer trade season**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.8,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 3.9271
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 16.2,
+        "retrieve_ms": 382.2,
+        "generation_ms": 1078.5,
+        "e2e_ms": 1477.1
+      },
+      "tokens": {
+        "input": 3705,
+        "output": 37
+      }
+    },
+    {
+      "id": "L002",
+      "category": "location",
+      "type": "factual_lookup",
+      "question": "Who governs Waterdeep?",
+      "ground_truth": "Waterdeep is governed by the Masked Lords.",
+      "generated_answer": "# Governance of Waterdeep\n\nAccording to the provided context, Waterdeep is governed by the **Masked Lords** \u2014 an anonymous council of rulers whose identities are state secrets.\n\nKey details about this government:\n\n- **The Masked Lords** are a council of secret rulers whose identities are protected for security reasons, ensuring that no rival can destroy the city's government by killing its leaders.\n\n- **The Open Lord** serves as the public face of governance and handles diplomatic and military affairs. According to the context provided, **Piergeiron the Paladinson** holds this position and is described as a legendary paladin-turned-ruler renowned for personal courage and incorruptibility.\n\n- **Law enforcement** is handled by the City Watch and City Guard, while the **Watchful Order of Magists and Protectors** polices magical misconduct.\n\nThe context emphasizes that the identity of who exactly sits behind the masked Lords' table remains an unsolved mystery.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.7,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 3.6057
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 16.6,
+        "retrieve_ms": 407.8,
+        "generation_ms": 4404.8,
+        "e2e_ms": 4829.4
+      },
+      "tokens": {
+        "input": 4771,
+        "output": 215
+      }
+    },
+    {
+      "id": "L003",
+      "category": "location",
+      "type": "factual_lookup",
+      "question": "What is the approximate population of Silverymoon?",
+      "ground_truth": "Silverymoon has approximately 37,000 residents.",
+      "generated_answer": "According to the provided context, Silverymoon has an approximate population of **~37,000**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 1.0,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 4.5436
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 18.7,
+        "retrieve_ms": 422.9,
+        "generation_ms": 847.3,
+        "e2e_ms": 1289.1
+      },
+      "tokens": {
+        "input": 4746,
+        "output": 24
+      }
+    },
+    {
+      "id": "L004",
+      "category": "location",
+      "type": "factual_lookup",
+      "question": "Who governs Silverymoon?",
+      "ground_truth": "Silverymoon is governed by the High Mage and a Senate.",
+      "generated_answer": "According to the provided context, Silverymoon is governed by a **High Mage who leads with broad civic support, advised by a Senate of elected representatives**.\n\nThe governance structure blends arcane leadership with civic republicanism \u2014 the High Mage holds real power but exercises it through persuasion and consensus rather than decree.\n\n**Alustriel Silverhand** is identified as the current High Mage of Silverymoon. She is described as one of the most powerful archmages in Faer\u00fbn, a Chosen of Mystra, and has shaped Silverymoon through her centuries of leadership. She is characterized as warm, politically brilliant, personally formidable, and a genuine idealist.\n\nSilverymoon is also noted as a founding member and driving force behind the **Lords' Alliance**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 1.0,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 4.5436
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 23.2,
+        "retrieve_ms": 425.0,
+        "generation_ms": 3136.4,
+        "e2e_ms": 3584.9
+      },
+      "tokens": {
+        "input": 5181,
+        "output": 180
+      }
+    },
+    {
+      "id": "L005",
+      "category": "location",
+      "type": "factual_lookup",
+      "question": "What is Candlekeep's primary function?",
+      "ground_truth": "Candlekeep is a Library Fortress.",
+      "generated_answer": "Based on the provided context, Candlekeep's primary function is to serve as a permanent repository and library for the collection and preservation of knowledge. \n\nThe context states that \"Candlekeep was founded at the directive of the god Oghma's servants to create a permanent repository of mortal knowledge.\" It is described as \"The Library Fortress\" and \"The Great Library of the Sword Coast,\" and is home to The Avowed \u2014 a monastic order dedicated to the collection and preservation of knowledge. The library currently houses over a quarter million volumes, with new donations arriving daily.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.5,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.9485
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 23.2,
+        "retrieve_ms": 492.6,
+        "generation_ms": 3237.1,
+        "e2e_ms": 3753.0
+      },
+      "tokens": {
+        "input": 4449,
+        "output": 129
+      }
+    },
+    {
+      "id": "L006",
+      "category": "location",
+      "type": "factual_lookup",
+      "question": "Who are the caretakers of Candlekeep?",
+      "ground_truth": "Candlekeep is maintained by approximately 200 Avowed monks.",
+      "generated_answer": "Based on the provided context, the caretakers of Candlekeep are **the Avowed** \u2014 a monastic order dedicated to the collection and preservation of knowledge.\n\nThe context describes them as approximately 200 resident monks who maintain the library fortress, manage the collection, enforce the book-for-entry requirement at the Emerald Door, and perform restoration work at the House of the Binder. They also maintain the complex magical and physical defenses of the Inner Ward and have developed a reputation as unexpectedly competent combatants.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.5616
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 23.7,
+        "retrieve_ms": 386.2,
+        "generation_ms": 3214.1,
+        "e2e_ms": 3624.2
+      },
+      "tokens": {
+        "input": 4570,
+        "output": 119
+      }
+    },
+    {
+      "id": "L007",
+      "category": "location",
+      "type": "comparison",
+      "question": "Which city is larger by population: Waterdeep or Silverymoon?",
+      "ground_truth": "Waterdeep is significantly larger, with approximately 130,000 permanent residents compared to Silverymoon's approximately 37,000 residents.",
+      "generated_answer": "Based on the provided context, **Waterdeep is larger by population**.\n\nWaterdeep has a permanent population of ~130,000 residents, which swells to 200,000+ during summer trade season.\n\nSilverymoon has a population of ~37,000.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.8,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.4042
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 15.3,
+        "retrieve_ms": 403.4,
+        "generation_ms": 1086.7,
+        "e2e_ms": 1505.7
+      },
+      "tokens": {
+        "input": 4260,
+        "output": 64
+      }
+    },
+    {
+      "id": "L008",
+      "category": "location",
+      "type": "comparison",
+      "question": "How do the governance structures of Waterdeep and Silverymoon differ?",
+      "ground_truth": "Waterdeep is governed by the secretive Masked Lords, while Silverymoon is governed by the High Mage along with a Senate.",
+      "generated_answer": "# Governance Structures: Waterdeep vs. Silverymoon\n\n## Waterdeep\nWaterdeep is governed by the **Masked Lords** \u2014 an anonymous council of secret rulers whose identities are deliberately concealed to protect the city's government from being destabilized by targeting its leaders. A single **Open Lord** serves as the public face of governance, handling diplomatic and military affairs. The **City Watch and City Guard** enforce laws, while the **Watchful Order of Magists and Protectors** polices magical misconduct.\n\n## Silverymoon\nSilverymoon is led by the **High Mage** who works with a **Senate of elected representatives**. The governance structure blends \"arcane leadership with civic republicanism\" \u2014 the High Mage holds real power but exercises it \"through persuasion and consensus rather than decree.\"\n\n## Key Difference\nThe fundamental contrast is that Waterdeep prioritizes secrecy and centralized authority (anonymous rulers), while Silverymoon emphasizes transparency, representation, and consensus-based decision-making (elected senate advising a leader who governs through persuasion rather than decree).",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.8,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.4241
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 18.8,
+        "retrieve_ms": 630.5,
+        "generation_ms": 3785.4,
+        "e2e_ms": 4434.9
+      },
+      "tokens": {
+        "input": 5121,
+        "output": 255
+      }
+    },
+    {
+      "id": "L009",
+      "category": "location",
+      "type": "relationship",
+      "question": "Which location in the compendium is most associated with arcane knowledge and libraries?",
+      "ground_truth": "Candlekeep is most associated with arcane knowledge and libraries, functioning as a Library Fortress maintained by Avowed monks.",
+      "generated_answer": "Based on the provided context, **Candlekeep** is the location most associated with arcane knowledge and libraries.\n\nThe context explicitly states that Candlekeep contains one of the Towers of Tomes specializing in \"arcana,\" and describes it as \"The Great Library of the Sword Coast\" with a collection of over a quarter million volumes dedicated to preserving mortal knowledge across seven categories of study.\n\nWhile the Host Tower of the Arcane is associated with arcane knowledge specifically, it is primarily a tower of the Arcane Brotherhood focused on magical competition and internal politics rather than a library or repository of knowledge in the way Candlekeep is designed.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.3,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.0616
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 0.95
+      },
+      "timing": {
+        "embed_ms": 20.3,
+        "retrieve_ms": 389.6,
+        "generation_ms": 2611.1,
+        "e2e_ms": 3021.2
+      },
+      "tokens": {
+        "input": 2358,
+        "output": 147
+      }
+    },
+    {
+      "id": "L010",
+      "category": "location",
+      "type": "multi_hop",
+      "question": "Which city is home to a Harper ally who is also a Chosen of Mystra?",
+      "ground_truth": "Silverymoon is home to Alustriel Silverhand, who is both a Harper ally and a Chosen of Mystra.",
+      "generated_answer": "Based on the provided context, **Silverymoon** is home to a Harper ally who is also a Chosen of Mystra.\n\nThe context states that Alustriel, who governs Silverymoon, \"has been alive for centuries because she's a Chosen of Mystra,\" and notes that \"the senior Harpers think about it often,\" establishing her connection to the Harper organization.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.3,
+        "recall_at_k": 0.5,
+        "mrr": 0.1429,
+        "ndcg_at_k": 0.575
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 21.4,
+        "retrieve_ms": 374.7,
+        "generation_ms": 1240.0,
+        "e2e_ms": 1636.4
+      },
+      "tokens": {
+        "input": 4908,
+        "output": 90
+      }
+    },
+    {
+      "id": "L011",
+      "category": "location",
+      "type": "multi_hop",
+      "question": "What artifact associated with Waterdeep would be useful to a rogue?",
+      "ground_truth": "The Nightmantle, a piece of Leather Armor requiring rogue attunement, is associated with Waterdeep.",
+      "generated_answer": "Based on the provided context, I cannot find a specific artifact associated with Waterdeep that is explicitly described as useful to a rogue.\n\nThe context mentions that Durnan at the Yawning Portal keeps \"a chest of unique treasure he retrieved from Undermountain in his youth\" that he sometimes shows to adventurers he likes, but the specific contents of this chest are not detailed in the provided material.\n\nTo answer your question accurately, I would need additional context describing artifacts in Waterdeep and their properties.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.7,
+        "recall_at_k": 0.5,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.1697
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.8,
+        "context_relevancy": 0.1
+      },
+      "timing": {
+        "embed_ms": 15.2,
+        "retrieve_ms": 364.9,
+        "generation_ms": 1529.4,
+        "e2e_ms": 1909.7
+      },
+      "tokens": {
+        "input": 4641,
+        "output": 114
+      }
+    },
+    {
+      "id": "L012",
+      "category": "location",
+      "type": "negative",
+      "question": "Is there a location called Myth Drannor in the compendium?",
+      "ground_truth": "There is no location called Myth Drannor in the compendium.",
+      "generated_answer": "Based on the provided context, Myth Drannor is not mentioned in the compendium. The context includes various Sword Coast locations organized into batches (Major Cities, Towns, Fortresses & Holds, Towers/Ruins/Dungeons, and Sacred Sites), but Myth Drannor does not appear in any of these lists or descriptions.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": null,
+        "recall_at_k": null,
+        "mrr": null,
+        "ndcg_at_k": null
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 0.85
+      },
+      "timing": {
+        "embed_ms": 22.4,
+        "retrieve_ms": 377.5,
+        "generation_ms": 1632.9,
+        "e2e_ms": 2032.9
+      },
+      "tokens": {
+        "input": 2294,
+        "output": 81
+      }
+    },
+    {
+      "id": "L013",
+      "category": "location",
+      "type": "generation_prompt",
+      "question": "Describe Candlekeep and how it might serve as a setting for an adventure.",
+      "ground_truth": "Candlekeep is a Library Fortress on the Sword Coast maintained by approximately 200 Avowed monks who dedicate their lives to preserving knowledge. It could serve as an adventure setting where the party seeks a rare tome, investigates a stolen manuscript, or uncovers an ancient secret hidden in its vast archives.",
+      "generated_answer": "# Candlekeep: Description and Adventure Potential\n\n## Description\n\nCandlekeep is a massive fortress-monastery on a sea cliff promontory above the Sea of Swords on the Sword Coast. It serves as the Great Library of the Sword Coast and repository of mortal knowledge, founded at the directive of Oghma's servants. The fortress features seven towers arranged around a heavily fortified Inner Ward, each tower specializing in different categories of knowledge: history, arcana, natural philosophy, theology, geography, languages, and a seventh tower whose specialization the Avowed decline to specify.\n\nAccess requires donating a book to the collection\u2014the requirement need not be a written text; one traveler allegedly gained entry with a book of pressed flowers documenting a previously unknown plant species.\n\n## Adventure Settings and Hooks\n\n**Escort Missions**: Parties can be hired to escort valuable donations to Candlekeep while three different factions intercept them en route, each wanting the book for different reasons.\n\n**Missing Scholar**: A scholar in residence stops communicating. When checked on, the Avowed confirm their presence, but the scholar's notes suggest they discovered something in the seventh tower.\n\n**Mysterious Theft**: Miirym, a spectral silver dragon bound to Candlekeep as its guardian spirit, directly addresses the party to retrieve a specific book stolen from the library decades ago. She knows its location but cannot leave Candlekeep herself.\n\n**Corrupted Texts**: A text in the collection has been mysteriously altered\u2014pages rewritten and prophecies changed\u2014without triggering any of the Inner Ward's complex magical wards, suggesting a serious breach.\n\n**Forgery Problem**: A party's donation copy is flagged as a known forgery by the Gatewarden, preventing access when they need to consult a specific text that could resolve a campaign mystery.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.5,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.8507
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 0.98,
+        "context_relevancy": 0.99
+      },
+      "timing": {
+        "embed_ms": 18.2,
+        "retrieve_ms": 450.6,
+        "generation_ms": 6105.6,
+        "e2e_ms": 6574.6
+      },
+      "tokens": {
+        "input": 4059,
+        "output": 410
+      }
+    },
+    {
+      "id": "L014",
+      "category": "location",
+      "type": "factual_lookup",
+      "question": "What type of settlement is Candlekeep classified as?",
+      "ground_truth": "Candlekeep is classified as a Library Fortress.",
+      "generated_answer": "According to the provided context, Candlekeep is classified as a **fortress** (also referred to as \"The Library Fortress\" and \"The Keep of Answers\").\n\nThis is confirmed in the metadata at the end of the Candlekeep section, which lists: `[type: fortress]`",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.5,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.9485
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 19.6,
+        "retrieve_ms": 1517.0,
+        "generation_ms": 1532.6,
+        "e2e_ms": 3069.4
+      },
+      "tokens": {
+        "input": 4486,
+        "output": 69
+      }
+    },
+    {
+      "id": "L015",
+      "category": "location",
+      "type": "relationship",
+      "question": "Which NPC is specifically associated with governing Silverymoon?",
+      "ground_truth": "Alustriel Silverhand governs Silverymoon as the Lady of Silverymoon.",
+      "generated_answer": "Based on the provided context, **Alustriel Silverhand** is specifically associated with governing Silverymoon. She is identified as the \"High Mage of Silverymoon\" and is described as one of the most powerful archmages in Faer\u00fbn and a Chosen of Mystra. The context states that \"Her centuries of leadership have shaped Silverymoon into the city it is\" and notes that she is \"at once a head of state, a mage of legendary skill, and a genuine idealist.\"\n\nThe context also explains that Silverymoon's government is led by a High Mage with a Senate of elected representatives advising, and the High Mage holds real power but exercises it through persuasion and consensus rather than decree.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.9,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.6013
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 19.1,
+        "retrieve_ms": 358.9,
+        "generation_ms": 3243.0,
+        "e2e_ms": 3621.2
+      },
+      "tokens": {
+        "input": 5375,
+        "output": 170
+      }
+    },
+    {
+      "id": "M001",
+      "category": "monster",
+      "type": "factual_lookup",
+      "question": "What is the Challenge Rating of Valorian the Steadfast?",
+      "ground_truth": "Valorian the Steadfast has a Challenge Rating of 5.",
+      "generated_answer": "According to the context provided, the Challenge Rating of Valorian the Steadfast is **5 (1800 XP)**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.6309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 19.1,
+        "retrieve_ms": 572.9,
+        "generation_ms": 841.3,
+        "e2e_ms": 1433.4
+      },
+      "tokens": {
+        "input": 4263,
+        "output": 32
+      }
+    },
+    {
+      "id": "M002",
+      "category": "monster",
+      "type": "factual_lookup",
+      "question": "What type of creature is Valorian the Steadfast?",
+      "ground_truth": "Valorian the Steadfast is a humanoid.",
+      "generated_answer": "According to the provided context, Valorian the Steadfast is a **Medium humanoid (human), lawful good**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.6309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 19.7,
+        "retrieve_ms": 530.9,
+        "generation_ms": 1553.9,
+        "e2e_ms": 2104.6
+      },
+      "tokens": {
+        "input": 4257,
+        "output": 29
+      }
+    },
+    {
+      "id": "M003",
+      "category": "monster",
+      "type": "factual_lookup",
+      "question": "What is the alignment of Valorian the Steadfast?",
+      "ground_truth": "Valorian the Steadfast is lawful good.",
+      "generated_answer": "According to the provided context, Valorian the Steadfast is **lawful good**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.6309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 18.0,
+        "retrieve_ms": 545.7,
+        "generation_ms": 739.1,
+        "e2e_ms": 1303.2
+      },
+      "tokens": {
+        "input": 3328,
+        "output": 22
+      }
+    },
+    {
+      "id": "M004",
+      "category": "monster",
+      "type": "factual_lookup",
+      "question": "What is the Challenge Rating of Skytalon the Majestic?",
+      "ground_truth": "Skytalon the Majestic has a Challenge Rating of 13.",
+      "generated_answer": "According to the provided context, the Challenge Rating of Skytalon the Majestic is **13 (10000 XP)**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.6309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 20.9,
+        "retrieve_ms": 657.6,
+        "generation_ms": 887.8,
+        "e2e_ms": 1566.4
+      },
+      "tokens": {
+        "input": 4156,
+        "output": 34
+      }
+    },
+    {
+      "id": "M005",
+      "category": "monster",
+      "type": "factual_lookup",
+      "question": "What is the size category of Skytalon the Majestic?",
+      "ground_truth": "Skytalon the Majestic is a Huge creature.",
+      "generated_answer": "According to the provided context, Skytalon the Majestic is **Huge**.\n\nThis is stated in the monster type line: \"Huge dragon, lawful evil\"",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.6309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 18.8,
+        "retrieve_ms": 682.2,
+        "generation_ms": 1342.2,
+        "e2e_ms": 2043.3
+      },
+      "tokens": {
+        "input": 3829,
+        "output": 42
+      }
+    },
+    {
+      "id": "M006",
+      "category": "monster",
+      "type": "factual_lookup",
+      "question": "What is the creature type of Skytalon the Majestic?",
+      "ground_truth": "Skytalon the Majestic is a dragon.",
+      "generated_answer": "According to the context, Skytalon the Majestic is a **Huge dragon, lawful evil**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.6309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 0.9,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 17.4,
+        "retrieve_ms": 598.3,
+        "generation_ms": 1087.7,
+        "e2e_ms": 1703.5
+      },
+      "tokens": {
+        "input": 4351,
+        "output": 28
+      }
+    },
+    {
+      "id": "M007",
+      "category": "monster",
+      "type": "factual_lookup",
+      "question": "What is the alignment of Skytalon the Majestic?",
+      "ground_truth": "Skytalon the Majestic is lawful evil.",
+      "generated_answer": "According to the provided context, Skytalon the Majestic is **lawful evil**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.6309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 27.4,
+        "retrieve_ms": 586.2,
+        "generation_ms": 807.9,
+        "e2e_ms": 1421.6
+      },
+      "tokens": {
+        "input": 3930,
+        "output": 24
+      }
+    },
+    {
+      "id": "M008",
+      "category": "monster",
+      "type": "comparison",
+      "question": "Which is the more powerful enemy: Valorian the Steadfast or Skytalon the Majestic?",
+      "ground_truth": "Skytalon the Majestic is more powerful, with a CR of 13 compared to Valorian the Steadfast's CR of 5.",
+      "generated_answer": "Based on the provided context, **Skytalon the Majestic is the more powerful enemy**.\n\nSkytalon has a Challenge Rating of 13 (10,000 XP), while Valorian the Steadfast has a Challenge Rating of 5 (1,800 XP). Additionally, Skytalon has significantly higher hit points (195 vs. 52), higher ability scores across the board, multiple damage resistances, legendary resistance, innate spellcasting abilities, and a devastating arcane breath attack. Valorian, while formidable as a paladin with strong defensive and supportive abilities, is substantially outmatched by the ancient dragon in terms of raw power and combat capability.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.5706
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 24.8,
+        "retrieve_ms": 623.2,
+        "generation_ms": 2075.2,
+        "e2e_ms": 2723.3
+      },
+      "tokens": {
+        "input": 3445,
+        "output": 158
+      }
+    },
+    {
+      "id": "M009",
+      "category": "monster",
+      "type": "comparison",
+      "question": "Compare the alignments of Valorian the Steadfast and Skytalon the Majestic.",
+      "ground_truth": "Valorian the Steadfast is lawful good, while Skytalon the Majestic is lawful evil. Both are lawful, but they are on opposite sides of the good-evil axis.",
+      "generated_answer": "Based on the provided context:\n\n**Valorian the Steadfast** has an alignment of **lawful good**.\n\n**Skytalon the Majestic** has an alignment of **lawful evil**.\n\nBoth creatures share the lawful alignment, but they are opposed on the good-evil axis. Valorian is dedicated to upholding law and order while protecting the innocent, whereas Skytalon is a lawful evil dragon that serves the Arcane Brotherhood and hoards magical artifacts.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.5706
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 16.8,
+        "retrieve_ms": 480.1,
+        "generation_ms": 2884.0,
+        "e2e_ms": 3381.0
+      },
+      "tokens": {
+        "input": 3655,
+        "output": 110
+      }
+    },
+    {
+      "id": "M010",
+      "category": "monster",
+      "type": "relationship",
+      "question": "What is the highest CR creature available in the compendium from the Sword Coast?",
+      "ground_truth": "Skytalon the Majestic has CR 13, which is the highest CR among the monsters confirmed from the Sword Coast compendium.",
+      "generated_answer": "Based on the provided context, the highest CR creature available in the compendium from the Sword Coast is **Grax Ruin** with a Challenge Rating of **15 (13000 XP)**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 0.4
+      },
+      "timing": {
+        "embed_ms": 16.6,
+        "retrieve_ms": 575.1,
+        "generation_ms": 1066.8,
+        "e2e_ms": 1658.7
+      },
+      "tokens": {
+        "input": 3495,
+        "output": 49
+      }
+    },
+    {
+      "id": "M011",
+      "category": "monster",
+      "type": "multi_hop",
+      "question": "What CR dragon would a party likely face on the Sword Coast, and what is its alignment?",
+      "ground_truth": "Skytalon the Majestic is a CR 13 Huge dragon found on the Sword Coast. It is lawful evil.",
+      "generated_answer": "Based on the provided context, I cannot give you a definitive answer to this question.\n\nThe context includes several dragons with different Challenge Ratings (Young Red Dragon CR 10, Young Silver Dragon CR 2, Adult Silver Dragon CR 2, Ancient Silver Dragon CR 20, and Half-Dragon CR 5), and mentions that some creatures are \"Witnessed near Waterdeep, Neverwinter, and Baldur's Gate\" (which are Sword Coast locations). However, the context does not explicitly state which specific dragon a party would \"likely\" encounter on the Sword Coast, nor does it provide a single answer about what CR level or alignment would be most probable for such an encounter.\n\nThe context does mention that Bronze Dragons patrol coastal waters and have encounter hooks related to coastal settlements, but does not provide full stat blocks or explicit confirmation that these are the most common Sword Coast encounters.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0
+      },
+      "generation_scores": {
+        "faithfulness": 0.9,
+        "answer_relevancy": 0.3,
+        "context_relevancy": 0.2
+      },
+      "timing": {
+        "embed_ms": 19.7,
+        "retrieve_ms": 648.8,
+        "generation_ms": 3391.9,
+        "e2e_ms": 4060.5
+      },
+      "tokens": {
+        "input": 4432,
+        "output": 191
+      }
+    },
+    {
+      "id": "M012",
+      "category": "monster",
+      "type": "negative",
+      "question": "Is there a monster called the Bloodfang Troll in the compendium?",
+      "ground_truth": "There is no monster called the Bloodfang Troll in the compendium.",
+      "generated_answer": "No, there is no monster called the Bloodfang Troll in the provided context. The compendium includes a creature simply called \"Troll,\" but not one with the name \"Bloodfang Troll.\"",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": null,
+        "recall_at_k": null,
+        "mrr": null,
+        "ndcg_at_k": null
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 22.4,
+        "retrieve_ms": 565.6,
+        "generation_ms": 1477.5,
+        "e2e_ms": 2065.6
+      },
+      "tokens": {
+        "input": 4073,
+        "output": 52
+      }
+    },
+    {
+      "id": "M013",
+      "category": "monster",
+      "type": "generation_prompt",
+      "question": "Describe Skytalon the Majestic and how a DM might use it as a boss encounter.",
+      "ground_truth": "Skytalon the Majestic is a CR 13 Huge lawful evil dragon on the Sword Coast. A DM might use it as the climax of a regional campaign, with the dragon demanding tribute from nearby cities and the party tasked with confronting it in its mountain lair.",
+      "generated_answer": "# Skytalon the Majestic\n\n## Description\n\nSkytalon is a Huge dragon of lawful evil alignment with a Challenge Rating of 13. It emerged from the elemental planes centuries ago through a wizard's failed summoning ritual. Rather than destroying the summoning tower, the dragon claimed it as its lair and hoard. Skytalon is obsessed with arcane magic and has accumulated thousands of spellbooks and enchanted artifacts. It is believed to have achieved a pact with the Arcane Brotherhood, trading secrets for freedom from interference.\n\n## Key Characteristics\n\n**Abilities & Combat:**\n- 195 hit points with AC 17\n- High Intelligence (18) and Charisma (19)\n- Innate spellcasting with a spell save DC of 16, including *arcane missile*, *dispel magic*, *fly*, *polymorph*, *telekinesis*, and *knock*\n- An **Arcane Resonance** trait that adds 1d6 to its next attack whenever a spell is cast within 60 feet of it\n- A powerful **Arcane Breath** attack dealing 13d8 force damage (recharge 5-6)\n- Multiattack with one bite and two claw attacks\n- **Legendary Resistance** (3/day)\n\n**Ecology & Habitat:**\nSkytalon dwells in high-altitude mountain sanctums and the upper reaches of Undermountain. It feeds on magical energy as much as physical sustenance, drawn to places of high magical concentration.\n\n## How a DM Might Use Skytalon as a Boss Encounter\n\nThe context provides three encounter hooks:\n\n1. **The dragon claims a piece of an adventuring party's commissioned artifact and demands tribute** \u2014 establishing Skytalon as an obstacle to the party's goals\n2. **A rogue mage has bound the dragon to guard a phylactery in the depths of Undermountain** \u2014 placing the encounter in a dungeon setting where the party must navigate the dragon's lair\n3. **Skytalon is seeking a specific spellbook rumored to be in the party's possession** \u2014 making the party a target and creating a personal stakes encounter",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.6309
+      },
+      "generation_scores": {
+        "faithfulness": 0.85,
+        "answer_relevancy": 0.95,
+        "context_relevancy": 0.9
+      },
+      "timing": {
+        "embed_ms": 21.2,
+        "retrieve_ms": 514.1,
+        "generation_ms": 6230.1,
+        "e2e_ms": 6765.5
+      },
+      "tokens": {
+        "input": 4182,
+        "output": 495
+      }
+    },
+    {
+      "id": "M014",
+      "category": "monster",
+      "type": "factual_lookup",
+      "question": "What level party would Valorian the Steadfast be appropriate for?",
+      "ground_truth": "As a CR 5 creature, Valorian the Steadfast is generally appropriate for a party of 4-5 players at around 5th level.",
+      "generated_answer": "The provided context does not explicitly state what level party would be appropriate for encountering Valorian the Steadfast.\n\nHowever, I can note that Valorian has a Challenge Rating of 5 (1800 XP), which is typically used in D&D 5e encounter design to suggest appropriate party levels, but the context does not provide specific guidance on this conversion.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.6309
+      },
+      "generation_scores": {
+        "faithfulness": 0.3,
+        "answer_relevancy": 0.2,
+        "context_relevancy": 0.9
+      },
+      "timing": {
+        "embed_ms": 18.8,
+        "retrieve_ms": 538.2,
+        "generation_ms": 1715.8,
+        "e2e_ms": 2272.9
+      },
+      "tokens": {
+        "input": 3744,
+        "output": 83
+      }
+    },
+    {
+      "id": "M015",
+      "category": "monster",
+      "type": "factual_lookup",
+      "question": "Is Valorian the Steadfast an enemy or ally type by alignment?",
+      "ground_truth": "Valorian the Steadfast is lawful good, suggesting it would typically function as an ally, quest-giver, or neutral party rather than a villain.",
+      "generated_answer": "Based on the provided context, Valorian the Steadfast is an **ally type by alignment**. \n\nHis alignment is listed as **lawful good**, and his lore describes him as \"a champion of the Lords' Alliance in Waterdeep, dedicated to upholding law and order\" who \"believes deeply in protecting the innocent and crushing evil wherever it manifests.\" These characteristics align him with heroic, protective values that would make him a potential ally rather than an enemy.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.6309
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 20.9,
+        "retrieve_ms": 629.8,
+        "generation_ms": 1870.5,
+        "e2e_ms": 2521.3
+      },
+      "tokens": {
+        "input": 3512,
+        "output": 105
+      }
+    },
+    {
+      "id": "X001",
+      "category": "weapon",
+      "type": "multi_hop",
+      "question": "What Legendary weapons in the compendium do not require attunement?",
+      "ground_truth": "The Wishbringer's Knife is a Legendary weapon that does not require attunement.",
+      "generated_answer": "Based on the provided context, there are no Legendary weapons listed in this compendium. All the weapons provided are of the following rarities: Very Rare, Uncommon, and Rare. None are classified as Legendary rarity.\n\nAdditionally, all of the weapons in this compendium require attunement.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 0.0
+      },
+      "timing": {
+        "embed_ms": 21.2,
+        "retrieve_ms": 579.8,
+        "generation_ms": 1437.9,
+        "e2e_ms": 2039.1
+      },
+      "tokens": {
+        "input": 3174,
+        "output": 71
+      }
+    },
+    {
+      "id": "X002",
+      "category": "artifact",
+      "type": "multi_hop",
+      "question": "Which Legendary artifacts in the compendium are weapons?",
+      "ground_truth": "The Dawnrazor is a Legendary Weapon of Legend (Longsword). The Cartographer's Compass is also Legendary but is a Wondrous Item, not a weapon.",
+      "generated_answer": "Based on the provided context, the following Legendary artifacts are weapons:\n\n1. **Anvil's Wrath** - Warhammer\n2. **The Codex Blade** - Shortsword\n3. **Venomstrike** - Scimitar\n4. **Dawnrazor** - Longsword\n5. **The Blackfang of Netheril** - Greatsword\n6. **Wyrmtooth** - Spear\n7. **Frostbane** - Battleaxe\n8. **Moonwhisper** - Rapier\n9. **Thalassra, the Tide's Fury** - Trident\n\nNote: The Cartographer's Compass is a Legendary wondrous item (not a weapon), so it is not included in this list.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 0.25,
+        "ndcg_at_k": 0.4413
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 17.2,
+        "retrieve_ms": 567.0,
+        "generation_ms": 3313.4,
+        "e2e_ms": 3897.9
+      },
+      "tokens": {
+        "input": 5533,
+        "output": 196
+      }
+    },
+    {
+      "id": "X003",
+      "category": "location",
+      "type": "multi_hop",
+      "question": "Which location in the compendium is governed by a secret council?",
+      "ground_truth": "Waterdeep is governed by the Masked Lords, a secretive council whose members are hidden from the public.",
+      "generated_answer": "Based on the provided context, **Scornubel** is governed by a council structure (though not explicitly described as \"secret\"). The context states: \"The council structure emerged from the practical need to settle disputes between trading companies without resorting to hired violence every time \u2014 an early experiment in commercial democracy that has functioned, imperfectly, ever since.\"\n\nHowever, if you're asking about a location with a genuinely *secret* governing body, the context does not explicitly describe any location in the compendium as being governed by a secret council. The council in Scornubel is public (with named members like Aldric Sunvane and Thentias), and the other locations mentioned (Gauntlgrym, Sundabar, Candlekeep, etc.) are described as having other forms of governance, but none are explicitly characterized as having a secret council.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0
+      },
+      "generation_scores": {
+        "faithfulness": 0.3,
+        "answer_relevancy": 0.2,
+        "context_relevancy": 0.0
+      },
+      "timing": {
+        "embed_ms": 14.5,
+        "retrieve_ms": 527.8,
+        "generation_ms": 3555.5,
+        "e2e_ms": 4098.1
+      },
+      "tokens": {
+        "input": 3958,
+        "output": 194
+      }
+    },
+    {
+      "id": "X004",
+      "category": "npc",
+      "type": "multi_hop",
+      "question": "Which NPC has both a political role and a divine connection?",
+      "ground_truth": "Alustriel Silverhand is both the Lady of Silverymoon (a political role) and a Chosen of Mystra (a divine connection).",
+      "generated_answer": "Based on the provided context, **Boris Manev** is the NPC who has both a political role and a divine connection.\n\nHe serves as:\n- **Political role**: Leader of the clerics' guild and a respected voice with city authorities and councils who consult him on matters of faith and healing\n- **Divine connection**: Highest-ranking cleric at the Temple of Suns, a powerful divine caster with sun domain focus, and a follower of the God of Suns\n\nThe context explicitly states he \"simultaneously serves as the highest-ranking cleric at the Temple of Suns in the city\" while leading \"an inclusive organization\" and being someone \"the city council listens to.\"",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 0.3
+      },
+      "timing": {
+        "embed_ms": 21.4,
+        "retrieve_ms": 510.6,
+        "generation_ms": 2350.7,
+        "e2e_ms": 2882.9
+      },
+      "tokens": {
+        "input": 3333,
+        "output": 153
+      }
+    },
+    {
+      "id": "X005",
+      "category": "monster",
+      "type": "multi_hop",
+      "question": "How many challenge ratings separate the weakest and strongest monsters in the custom Sword Coast compendium?",
+      "ground_truth": "The weakest listed monster is Valorian the Steadfast at CR 5 and the strongest is Skytalon the Majestic at CR 13, a difference of 8 CR levels.",
+      "generated_answer": "Based on the provided context, I need to identify the weakest and strongest monsters by Challenge Rating:\n\n**Weakest monsters:**\n- Bandit: CR 1/8 (25 XP)\n- Duergar: CR 1/8 (25 XP)\n\n**Strongest monster:**\n- Velstrom Scourge: CR 10 (5900 XP)\n\nThe difference is: 10 - 1/8 = **9 7/8 challenge ratings** (or 9.875 CR).",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "ndcg_at_k": 0.0
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 0.0
+      },
+      "timing": {
+        "embed_ms": 17.6,
+        "retrieve_ms": 539.0,
+        "generation_ms": 1850.6,
+        "e2e_ms": 2407.3
+      },
+      "tokens": {
+        "input": 3752,
+        "output": 129
+      }
+    },
+    {
+      "id": "X006",
+      "category": "weapon",
+      "type": "relationship",
+      "question": "What do the Mindrender Scythe and Wishbringer's Knife have in common?",
+      "ground_truth": "Both the Mindrender Scythe and the Wishbringer's Knife are Legendary rarity weapons.",
+      "generated_answer": "Based on the provided context, the Mindrender Scythe and Wishbringer's Knife have the following in common:\n\n1. **Both are Legendary rarity items**\n2. **Both require no attunement**\n3. **Neither has a curse**\n4. **Both have no attack or damage bonus** (the Mindrender Scythe has \"No attack or damage bonus\" and the Wishbringer's Knife has \"+1 attack rolls and damage rolls\" - actually, I need to correct this: the Wishbringer's Knife does have a +1 bonus, so this is not shared)\n\nThe most definitive commonalities are that both are **Legendary/Legendary rarity items** and **neither requires attunement**.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 1.0
+      },
+      "timing": {
+        "embed_ms": 16.7,
+        "retrieve_ms": 541.1,
+        "generation_ms": 2269.0,
+        "e2e_ms": 2826.9
+      },
+      "tokens": {
+        "input": 2989,
+        "output": 171
+      }
+    },
+    {
+      "id": "X007",
+      "category": "artifact",
+      "type": "relationship",
+      "question": "Which artifact in the compendium has the oldest historical origin date?",
+      "ground_truth": "The Cartographer's Compass was created in 1385 DR during the Spellplague, giving it the oldest explicitly dated origin among the artifacts.",
+      "generated_answer": "Based on the provided context, **the Tome of the Starry Veil** has the oldest historical origin date. It was created by Zalathorm, a legendary Netherese mage, circa **1100 DR** during the Height of Netheril.\n\nThis predates the other artifacts with documented creation dates:\n- The Eternal Hourglass (1248 DR)\n- The Atlas of Forgotten Doors (1385 DR)\n- The Cartographer's Compass (1385 DR)\n\nHowever, it should be noted that **the Ledger of the Infernal Covenant** may be older still. The context states that \"the oldest entries in the Ledger are not in any known language, suggesting it dates back further than 1047 DR,\" but since no specific earlier date is provided, the Tome of the Starry Veil remains the artifact with the clearest documented oldest origin date.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.2,
+        "recall_at_k": 1.0,
+        "mrr": 0.5,
+        "ndcg_at_k": 1.0178
+      },
+      "generation_scores": {
+        "faithfulness": 0.2,
+        "answer_relevancy": 0.1,
+        "context_relevancy": 0.3
+      },
+      "timing": {
+        "embed_ms": 21.4,
+        "retrieve_ms": 615.3,
+        "generation_ms": 2940.3,
+        "e2e_ms": 3577.3
+      },
+      "tokens": {
+        "input": 4301,
+        "output": 210
+      }
+    },
+    {
+      "id": "X008",
+      "category": "npc",
+      "type": "negative",
+      "question": "Does the compendium contain any NPCs associated with the Zhentarim?",
+      "ground_truth": "Based on the available compendium data, no NPCs are explicitly identified as being associated with the Zhentarim.",
+      "generated_answer": "Based on my review of the provided context, the answer is **not explicitly stated**. \n\nWhile the context mentions various factions and organizations (paladin orders, the Lords' Alliance, temples, the Red Wizards of Thay, guilds of rangers and fishers, and thieves' guilds), there is no explicit mention of the Zhentarim or any NPC being associated with them.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": null,
+        "recall_at_k": null,
+        "mrr": null,
+        "ndcg_at_k": null
+      },
+      "generation_scores": {
+        "faithfulness": 1.0,
+        "answer_relevancy": 1.0,
+        "context_relevancy": 0.0
+      },
+      "timing": {
+        "embed_ms": 18.1,
+        "retrieve_ms": 544.7,
+        "generation_ms": 1689.4,
+        "e2e_ms": 2252.4
+      },
+      "tokens": {
+        "input": 3270,
+        "output": 90
+      }
+    },
+    {
+      "id": "X009",
+      "category": "location",
+      "type": "generation_prompt",
+      "question": "How might a DM use the differences between Waterdeep and Silverymoon as the basis for a political intrigue plot?",
+      "ground_truth": "Waterdeep's secretive Masked Lords and large population (130,000) contrast with Silverymoon's more open High Mage and Senate governance of a smaller city (37,000). A DM could create a plot where Waterdeep's hidden rulers attempt to extend influence over Silverymoon, creating tension between the two power structures.",
+      "generated_answer": "This question asks me to synthesize information from the provided context in a way that goes beyond what is explicitly stated. While the context provides detailed descriptions of both Waterdeep and Silverymoon separately, it does not contain any explicit discussion of how to use differences between these two cities as the basis for a political intrigue plot.\n\nI can identify relevant differences in the context (for example, Waterdeep's masked Lords versus Silverymoon's more visible leadership under Alustriel, or their different relationships to magical power), but providing a thoughtful answer about how a DM might *use* these differences for plot purposes would require me to go beyond the provided information and into general D&D DMing advice.\n\nI cannot answer this question using only the provided context.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.9,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.6013
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 0.15,
+        "context_relevancy": 0.45
+      },
+      "timing": {
+        "embed_ms": 21.2,
+        "retrieve_ms": 373.4,
+        "generation_ms": 2299.5,
+        "e2e_ms": 2694.1
+      },
+      "tokens": {
+        "input": 4315,
+        "output": 166
+      }
+    },
+    {
+      "id": "X010",
+      "category": "artifact",
+      "type": "generation_prompt",
+      "question": "How might a DM use Shar's Obsidian Mirror as a plot device in a campaign?",
+      "ground_truth": "Shar's Obsidian Mirror is a powerful Relic associated with shadow magic and the goddess Shar. A DM might use it as a corrupting artifact that a villain seeks to open a portal to the Shadowfell, or as a scrying device that shows dark visions of possible futures.",
+      "generated_answer": "Based on the context provided, a DM can use Shar's Obsidian Mirror as a plot device in several ways:\n\n**Direct Party Involvement:**\n- The Church of Shar offers the party a bargain to use the mirror to reveal a hidden conspiracy in exchange for knowledge the party desperately seeks\n- A mysterious figure hunts the party using the mirror to extract their secrets, forcing investigation and confrontation\n- A noble hires the party to steal the mirror from the Secret Temple, creating a moral dilemma\n- Someone uses the mirror to discover a dangerous secret one party member has been keeping (betrayal, hidden identity, past crime) and distributes it to allies, creating a trust-breaking crisis\n\n**Environmental Storytelling:**\n- The party encounters a broken figure compulsively speaking aloud all their secrets after catching a glimpse of the mirror, demonstrating its corrupting power\n- Investigation into a mysterious figure's knowledge of the party's secrets leads them to discover the mirror's existence and power\n\n**Campaign Consequences:**\n- Use the mirror's corruption mechanic to gradually transform an NPC ally into someone unreliable and cruel, showing the party the dangers of the artifact\n- Explore how the mirror is being used by the Church of Shar to manipulate events across the Sword Coast\n\nThese encounter hooks allow the mirror to drive plot, create moral conflicts, and demonstrate real consequences through NPC examples.",
+      "num_chunks_retrieved": 10,
+      "retrieval_metrics": {
+        "precision_at_k": 0.4,
+        "recall_at_k": 1.0,
+        "mrr": 1.0,
+        "ndcg_at_k": 2.5616
+      },
+      "generation_scores": {
+        "faithfulness": 0.95,
+        "answer_relevancy": 0.98,
+        "context_relevancy": 0.92
+      },
+      "timing": {
+        "embed_ms": 23.8,
+        "retrieve_ms": 588.1,
+        "generation_ms": 5715.2,
+        "e2e_ms": 6327.3
+      },
+      "tokens": {
+        "input": 4713,
+        "output": 306
+      }
+    }
+  ]
+}

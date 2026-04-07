@@ -1,0 +1,18 @@
+# Phase 5 variant B: top-k = 5
+name: phase5_top5
+description: "Phase 5 — top-k=5; best search method from Phase 4"
+
+chunking:
+  size: 512    # placeholder — update with best chunk size from Phase 2
+  overlap: 100
+
+embedding:
+  model: text-embedding-ada-002  # placeholder — update with best embedding from Phase 3
+
+retrieval:
+  method: vector  # placeholder — update with best search method from Phase 4
+  top_k: 5
+  hybrid_alpha: null
+
+metadata_filter: true
+reranking: false

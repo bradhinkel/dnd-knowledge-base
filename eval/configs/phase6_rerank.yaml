@@ -1,0 +1,19 @@
+# Phase 6 variant B: cross-encoder reranking
+name: phase6_rerank
+description: "Phase 6 — cross-encoder reranking; best top-k from Phase 5"
+
+chunking:
+  size: 512    # placeholder — update with best chunk size from Phase 2
+  overlap: 100
+
+embedding:
+  model: text-embedding-ada-002  # placeholder — update with best embedding from Phase 3
+
+retrieval:
+  method: vector  # placeholder — update with best search method from Phase 4
+  top_k: 5        # placeholder — update with best top-k from Phase 5
+  hybrid_alpha: null
+
+metadata_filter: true
+reranking: true
+reranker_model: cross-encoder/ms-marco-MiniLM-L-6-v2

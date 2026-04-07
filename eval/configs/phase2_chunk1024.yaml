@@ -1,0 +1,18 @@
+# Phase 2 variant C: chunk size 1024
+name: phase2_chunk1024
+description: "Phase 2 — chunk 1024/200, ada-002, vector, top-5, best filter from Phase 1"
+
+chunking:
+  size: 1024
+  overlap: 200
+
+embedding:
+  model: text-embedding-ada-002
+
+retrieval:
+  method: vector
+  top_k: 5
+  hybrid_alpha: null
+
+metadata_filter: true
+reranking: false

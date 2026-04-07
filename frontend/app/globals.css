@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0f0f1a;
+  --bg-surface: #1a1a2e;
+  --bg-card: #16213e;
+  --border: #2a2a4a;
+  --accent: #c49a3c;
+  --accent-light: #e8b84b;
+  --text-primary: #e8e0d0;
+  --text-muted: #9090a0;
+}
+
+:root[data-theme='embedded'] {
+  --bg-primary: transparent;
+  --bg-surface: rgba(26, 26, 46, 0.95);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Gold divider */
+.gold-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+  margin: 1.5rem 0;
+}
+
+/* Rarity badge colours */
+.rarity-common    { background: #555; }
+.rarity-uncommon  { background: #1a7a1a; }
+.rarity-rare      { background: #1a3a8a; }
+.rarity-very-rare { background: #6a1a9a; }
+.rarity-legendary { background: #8a4a00; }
+.rarity-artifact  { background: #7a0000; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }

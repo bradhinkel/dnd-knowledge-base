@@ -1,0 +1,20 @@
+[Unit]
+Description=D&D Knowledge Base Next.js Frontend
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/dnd-knowledge-base/frontend
+Environment=PORT=3000
+Environment=NODE_ENV=production
+EnvironmentFile=/opt/dnd-knowledge-base/.env
+ExecStart=/usr/bin/node .next/standalone/server.js
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

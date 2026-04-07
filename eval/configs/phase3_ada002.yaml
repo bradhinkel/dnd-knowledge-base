@@ -1,0 +1,18 @@
+# Phase 3 variant A: embedding model ada-002 (OpenAI)
+name: phase3_ada002
+description: "Phase 3 — embedding text-embedding-ada-002; best chunk from Phase 2"
+
+chunking:
+  size: 512    # placeholder — update with best chunk size from Phase 2
+  overlap: 100
+
+embedding:
+  model: text-embedding-ada-002
+
+retrieval:
+  method: vector
+  top_k: 5
+  hybrid_alpha: null
+
+metadata_filter: true
+reranking: false

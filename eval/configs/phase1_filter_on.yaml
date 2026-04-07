@@ -1,0 +1,18 @@
+# Phase 1 variant B: metadata filtering ON
+name: phase1_filter_on
+description: "Phase 1 — metadata filtering ON; chunk 1000/200, ada-002, vector, top-5"
+
+chunking:
+  size: 1000
+  overlap: 200
+
+embedding:
+  model: text-embedding-ada-002
+
+retrieval:
+  method: vector
+  top_k: 5
+  hybrid_alpha: null
+
+metadata_filter: true
+reranking: false

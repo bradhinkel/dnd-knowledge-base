@@ -1,0 +1,18 @@
+# Phase 4 variant C: search method = hybrid (vector + BM25)
+name: phase4_hybrid
+description: "Phase 4 — hybrid search (alpha=0.5); best embedding from Phase 3"
+
+chunking:
+  size: 512    # placeholder — update with best chunk size from Phase 2
+  overlap: 100
+
+embedding:
+  model: text-embedding-ada-002  # placeholder — update with best embedding from Phase 3
+
+retrieval:
+  method: hybrid
+  top_k: 5
+  hybrid_alpha: 0.5   # 0.0 = pure BM25, 1.0 = pure vector
+
+metadata_filter: true
+reranking: false

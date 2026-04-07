@@ -1,0 +1,18 @@
+# Phase 2 variant A: chunk size 256
+name: phase2_chunk256
+description: "Phase 2 — chunk 256/50, ada-002, vector, top-5, best filter from Phase 1"
+
+chunking:
+  size: 256
+  overlap: 50
+
+embedding:
+  model: text-embedding-ada-002
+
+retrieval:
+  method: vector
+  top_k: 5
+  hybrid_alpha: null
+
+metadata_filter: true   # best result from Phase 1 — update if Phase 1 shows filter_off wins
+reranking: false

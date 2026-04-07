@@ -1,0 +1,18 @@
+# Baseline: Flowise prototype settings (Table 18)
+name: baseline
+description: "Flowise prototype baseline — chunk 1000/200, ada-002, vector-only, top-6, no filter, no rerank"
+
+chunking:
+  size: 1000
+  overlap: 200
+
+embedding:
+  model: text-embedding-ada-002
+
+retrieval:
+  method: vector       # vector | bm25 | hybrid
+  top_k: 6
+  hybrid_alpha: null   # only used when method=hybrid
+
+metadata_filter: false
+reranking: false

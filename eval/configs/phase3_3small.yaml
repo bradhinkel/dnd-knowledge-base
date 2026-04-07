@@ -1,0 +1,18 @@
+# Phase 3 variant B: embedding model text-embedding-3-small (OpenAI)
+name: phase3_3small
+description: "Phase 3 — embedding text-embedding-3-small; best chunk from Phase 2"
+
+chunking:
+  size: 512    # placeholder — update with best chunk size from Phase 2
+  overlap: 100
+
+embedding:
+  model: text-embedding-3-small
+
+retrieval:
+  method: vector
+  top_k: 5
+  hybrid_alpha: null
+
+metadata_filter: true
+reranking: false

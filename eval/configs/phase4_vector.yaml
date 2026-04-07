@@ -1,0 +1,18 @@
+# Phase 4 variant A: search method = vector only
+name: phase4_vector
+description: "Phase 4 — vector search only; best embedding from Phase 3"
+
+chunking:
+  size: 512    # placeholder — update with best chunk size from Phase 2
+  overlap: 100
+
+embedding:
+  model: text-embedding-ada-002  # placeholder — update with best embedding from Phase 3
+
+retrieval:
+  method: vector
+  top_k: 5
+  hybrid_alpha: null
+
+metadata_filter: true
+reranking: false

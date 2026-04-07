@@ -90,9 +90,10 @@ async def generate_item_stream(category: str, request: GenerateRequest):
 
         try:
             record = await db_service.save_item(category, content, image_url)
-        except Exception:
-            import uuid
+        except Exception as db_err:
+            import uuid, logging
             from datetime import datetime, timezone
+            logging.error(f"DB save failed: {db_err}", exc_info=True)
             record = {
                 "id": str(uuid.uuid4()),
                 "category": category,

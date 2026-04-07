@@ -63,7 +63,11 @@ export default function ItemPage() {
       <div className="rounded-lg border overflow-hidden"
            style={{ background: 'var(--bg-surface)', borderColor: 'var(--border)' }}>
         {item.image_url && (
-          <ImageDisplay src={item.image_url} alt={item.name} className="w-full h-64 object-cover" />
+          <div className="flex justify-center p-4">
+            <div className="w-48 aspect-square overflow-hidden">
+              <ImageDisplay src={item.image_url} alt={item.name} className="w-full h-full object-contain" />
+            </div>
+          </div>
         )}
         <div className="p-6">
           <div className="flex items-start justify-between mb-4">

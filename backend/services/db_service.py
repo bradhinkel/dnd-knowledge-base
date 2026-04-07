@@ -58,7 +58,7 @@ async def save_item(category: str, content: dict, image_url: Optional[str] = Non
     """Persist a generated item and return the full record."""
     pool = await get_pool()
     item_id = str(uuid.uuid4())
-    now = datetime.now(timezone.utc).isoformat()
+    now = datetime.now(timezone.utc)
     name = content.get("name", "Unknown")
     rarity = content.get("rarity") or content.get("challenge_rating")
 
@@ -79,7 +79,7 @@ async def save_item(category: str, content: dict, image_url: Optional[str] = Non
         "rarity": str(rarity) if rarity else None,
         "content": content,
         "image_url": image_url,
-        "created_at": now,
+        "created_at": now.isoformat(),
     }
 
 

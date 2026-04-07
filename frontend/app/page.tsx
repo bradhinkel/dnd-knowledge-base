@@ -38,39 +38,30 @@ export default function GeneratorPage() {
         if (done) break
         buffer += decoder.decode(value, { stream: true })
 
-        const lines = buffer.split('\n')
-        buffer = lines.pop() ?? ''
-
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const data = JSON.parse(line.slice(6))
-            if (data.message) setStatus(data.message)
-          } else if (line.startsWith('event: done')) {
-            // next line has data
-          } else if (line.startsWith('data: ') && !line.includes('message')) {
-            // final result
-          }
-        }
-
-        // Parse SSE events
+        // SSE events are separated by \n\n
         const events = buffer.split('\n\n')
+        buffer = events.pop() ?? '' // keep incomplete trailing event
+
         for (const event of events) {
           if (!event.trim()) continue
-          const lines2 = event.split('\n')
-          const eventType = lines2.find(l => l.startsWith('event:'))?.split(': ')[1]
-          const dataLine = lines2.find(l => l.startsWith('data:'))?.slice(6)
+          const lines = event.split('\n')
+          const eventType = lines.find(l => l.startsWith('event:'))?.slice(7).trim()
+          const dataLine = lines.find(l => l.startsWith('data:'))?.slice(5).trim()
           if (!dataLine) continue
-          const data = JSON.parse(dataLine)
-          if (eventType === 'done') {
-            setResult(data)
-            setStatus('')
-          } else if (eventType === 'error') {
-            setError(data.message)
-          } else if (eventType === 'status') {
-            setStatus(data.message)
+          try {
+            const data = JSON.parse(dataLine)
+            if (eventType === 'done') {
+              setResult(data)
+              setStatus('')
+            } else if (eventType === 'error') {
+              setError(data.message)
+            } else if (eventType === 'status') {
+              setStatus(data.message)
+            }
+          } catch {
+            // ignore malformed events
           }
         }
-        buffer = ''
       }
     } catch (e: any) {
       setError(e.message || 'Generation failed')

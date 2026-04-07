@@ -20,6 +20,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from backend.routes import generate, gallery, images
+from backend.services import db_service
 
 app = FastAPI(
     title="D&D Knowledge Base API",
@@ -39,6 +40,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.on_event("startup")
+async def startup():
+    await db_service.init_db()
+
 
 app.include_router(generate.router, prefix="/generate", tags=["generate"])
 app.include_router(gallery.router, prefix="/items", tags=["gallery"])

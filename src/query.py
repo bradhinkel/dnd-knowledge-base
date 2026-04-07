@@ -5,6 +5,7 @@ Wraps LlamaIndex's retrieval with ChromaDB metadata filtering so that
 queries for weapons only retrieve weapons, artifacts only artifacts, etc.
 """
 
+import os
 from pathlib import Path
 
 import chromadb
@@ -17,7 +18,7 @@ from llama_index.vector_stores.chroma import ChromaVectorStore
 load_dotenv()
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-CHROMA_PATH = PROJECT_ROOT / "chroma_db"
+CHROMA_PATH = Path(os.getenv("CHROMA_DB_PATH", str(PROJECT_ROOT / "chroma_db")))
 COLLECTION_NAME = "dnd_knowledge"
 
 

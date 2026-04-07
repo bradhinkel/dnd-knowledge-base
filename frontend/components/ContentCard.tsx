@@ -44,11 +44,13 @@ export default function ContentCard({ item, category, expanded = false }: Props)
       style={{ background: 'var(--bg-card)', borderColor: 'var(--border)' }}
     >
       {item.image_url && (
-        <ImageDisplay
-          src={item.image_url}
-          alt={item.name}
-          className={`w-full object-cover ${expanded ? 'h-72' : 'h-40'}`}
-        />
+        <div className="w-full aspect-square overflow-hidden">
+          <ImageDisplay
+            src={item.image_url}
+            alt={item.name}
+            className="w-full h-full object-contain"
+          />
+        </div>
       )}
 
       <div className="p-4 space-y-3">

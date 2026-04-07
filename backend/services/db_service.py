@@ -125,7 +125,7 @@ async def get_items(
             "category": r["category"],
             "name": r["name"],
             "rarity": r["rarity"],
-            "content": dict(r["content"]),
+            "content": json.loads(r["content"]) if isinstance(r["content"], str) else dict(r["content"]),
             "image_url": r["image_url"],
             "created_at": r["created_at"].isoformat(),
         }
@@ -152,7 +152,7 @@ async def get_item_by_id(item_id: str) -> Optional[dict]:
         "category": row["category"],
         "name": row["name"],
         "rarity": row["rarity"],
-        "content": dict(row["content"]),
+        "content": json.loads(row["content"]) if isinstance(row["content"], str) else dict(row["content"]),
         "image_url": row["image_url"],
         "created_at": row["created_at"].isoformat(),
     }

@@ -86,8 +86,10 @@ async def generate_image(prompt: str, item_id: str | None = None) -> str | None:
             await f.write(image_bytes)
 
         if _USE_PROXY:
+            # Local dev: route through Next.js API proxy → backend /static/images/
             return f"/api/static/images/{filename}"
-        return f"{BASE_URL}/static/images/{filename}"
+        # Production: Nginx serves /images/ directly from IMAGES_DIR
+        return f"{BASE_URL}/images/{filename}"
 
     except Exception as e:
         print(f"[image_service] Image generation failed for item {item_id}: {e}")

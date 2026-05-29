@@ -206,7 +206,7 @@ def generate(category: str, **kwargs) -> dict:
 
     # Call the LLM
     console.print(f"[bold]Generating {category}…[/bold]")
-    llm = Anthropic(model="claude-haiku-4-5-20251001", max_tokens=4096)
+    llm = Anthropic(model="claude-sonnet-4-5", max_tokens=8192)
 
     messages = [
         ChatMessage(role=MessageRole.SYSTEM, content=system_prompt.strip()),

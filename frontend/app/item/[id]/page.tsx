@@ -1,20 +1,22 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useParams, useRouter } from 'next/navigation'
-import ContentDetail from '@/components/ContentDetail'
-import ImageDisplay from '@/components/ImageDisplay'
+import { useParams } from 'next/navigation'
+import TomeBar from '@/components/TomeBar'
+import TomePage from '@/components/TomePage'
+import { RuneRing } from '@/components/Ornaments'
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || '/api'
 
 export default function ItemPage() {
   const { id } = useParams<{ id: string }>()
-  const router = useRouter()
   const [item, setItem] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+  const [bound, setBound] = useState(false)
 
   useEffect(() => {
+    if (!id) return
     async function fetchItem() {
       try {
         const res = await fetch(`${API_BASE}/items/${id}`)
@@ -26,64 +28,46 @@ export default function ItemPage() {
         setLoading(false)
       }
     }
-    if (id) fetchItem()
+    fetchItem()
   }, [id])
 
   if (loading) {
     return (
-      <div className="text-center py-20">
-        <div className="inline-block w-8 h-8 border-2 rounded-full animate-spin"
-             style={{ borderColor: 'var(--accent)', borderTopColor: 'transparent' }} />
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', gap: '1.5rem' }}>
+        <div className="ring r1" style={{ width: 120, height: 120, animation: 'spin 4s linear infinite' }}>
+          <RuneRing size={120} />
+        </div>
+        <p style={{ fontFamily: 'var(--display)', color: 'var(--gold-pale)', letterSpacing: '.12em', textTransform: 'uppercase', fontSize: '.85rem' }}>
+          Opening the tome…
+        </p>
       </div>
     )
   }
 
   if (error || !item) {
     return (
-      <div className="text-center py-20 space-y-4">
-        <p className="text-xl" style={{ color: 'var(--text-muted)' }}>Item not found</p>
-        <button onClick={() => router.push('/gallery')}
-                className="underline" style={{ color: 'var(--accent)' }}>
-          Back to gallery
-        </button>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', gap: '1rem' }}>
+        <p style={{ fontFamily: 'var(--display)', color: 'var(--gold-pale)', letterSpacing: '.1em', fontSize: '1rem' }}>
+          {error || 'This page was not found in the archives.'}
+        </p>
+        <a href="/" style={{ fontFamily: 'var(--display)', color: 'var(--crimson)', fontSize: '.8rem', textTransform: 'uppercase', letterSpacing: '.1em' }}>
+          Return to the Workshop →
+        </a>
       </div>
     )
   }
 
   return (
-    <div className="max-w-3xl mx-auto space-y-6">
-      <button
-        onClick={() => router.back()}
-        className="text-sm flex items-center gap-2 hover:opacity-80 transition-opacity"
-        style={{ color: 'var(--text-muted)' }}
-      >
-        ← Back
-      </button>
-
-      <div className="rounded-lg border overflow-hidden"
-           style={{ background: 'var(--bg-surface)', borderColor: 'var(--border)' }}>
-        {item.image_url && (
-          <div className="flex justify-center p-4">
-            <div className="w-48 aspect-square overflow-hidden">
-              <ImageDisplay src={item.image_url} alt={item.name} className="w-full h-full object-contain" />
-            </div>
-          </div>
-        )}
-        <div className="p-6">
-          <div className="flex items-start justify-between mb-4">
-            <div>
-              <h1 className="text-2xl font-bold" style={{ color: 'var(--accent)', fontFamily: 'Georgia, serif' }}>
-                {item.name}
-              </h1>
-              <p className="text-sm capitalize mt-1" style={{ color: 'var(--text-muted)' }}>
-                {item.category} {item.rarity ? `· ${item.rarity}` : ''}
-              </p>
-            </div>
-          </div>
-          <hr className="gold-divider" />
-          <ContentDetail content={item.content} category={item.category} />
-        </div>
+    <>
+      <TomeBar
+        backHref="/"
+        backLabel="The Workshop"
+        bound={bound}
+        onBind={() => setBound(true)}
+      />
+      <div className="stage" style={{ paddingTop: 34 }}>
+        <TomePage item={item} />
       </div>
-    </div>
+    </>
   )
 }

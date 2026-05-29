@@ -4,6 +4,7 @@
 
 # Python
 venv/
+.venv/
 __pycache__/
 *.py[cod]
 *.pyo
@@ -18,10 +19,15 @@ build/
 .mypy_cache/
 .ruff_cache/
 
-# Data (large files — transfer separately)
+# Vector store and eval data (large binaries, transfer separately)
 chroma_db/
 chroma_eval/
-data/
+
+# Source documents in data/ — user-supplied, potentially copyrighted.
+# Sample_*.docx files are original LLM-generated content and ARE committed.
+data/**/*.docx
+data/**/*.pdf
+!data/**/Sample_*.docx
 
 # Node
 frontend/node_modules/
@@ -36,13 +42,15 @@ Thumbs.db
 notebooks/.ipynb_checkpoints/
 *.ipynb_checkpoints/
 
-# Docs (local only)
+# Docs (local only — provide your own source documents)
+# Note: Sample_*.docx in data/ are explicitly un-ignored below
 *.docx
 *.pdf
+!data/**/Sample_*.docx
 
 # Logs
 *.log
 logs/
 
-# Images (stored in /var/data on server)
+# Images (stored in /var/data on server, not in repo)
 images/

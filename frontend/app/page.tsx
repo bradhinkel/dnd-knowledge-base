@@ -1,24 +1,25 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import CategorySelector from '@/components/CategorySelector'
 import GeneratorForm from '@/components/GeneratorForm'
-import ContentCard from '@/components/ContentCard'
+import ConjuringRitual from '@/components/ConjuringRitual'
+import { Fleuron, CornerFlourish } from '@/components/Ornaments'
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || '/api'
 
 export default function GeneratorPage() {
+  const router = useRouter()
   const [category, setCategory] = useState('weapon')
   const [generating, setGenerating] = useState(false)
   const [status, setStatus] = useState('')
-  const [result, setResult] = useState<any>(null)
   const [error, setError] = useState('')
 
   async function handleGenerate(params: Record<string, string>) {
     setGenerating(true)
     setError('')
-    setResult(null)
-    setStatus('Retrieving references from knowledge base…')
+    setStatus('')
 
     try {
       const response = await fetch(`${API_BASE}/generate/${category}/stream`, {
@@ -38,9 +39,8 @@ export default function GeneratorPage() {
         if (done) break
         buffer += decoder.decode(value, { stream: true })
 
-        // SSE events are separated by \n\n
         const events = buffer.split('\n\n')
-        buffer = events.pop() ?? '' // keep incomplete trailing event
+        buffer = events.pop() ?? ''
 
         for (const event of events) {
           if (!event.trim()) continue
@@ -51,78 +51,62 @@ export default function GeneratorPage() {
           try {
             const data = JSON.parse(dataLine)
             if (eventType === 'done') {
-              setResult(data)
-              setStatus('')
+              router.push(`/item/${data.id}`)
+              return
             } else if (eventType === 'error') {
               setError(data.message)
+              setGenerating(false)
             } else if (eventType === 'status') {
               setStatus(data.message)
             }
           } catch {
-            // ignore malformed events
+            // ignore malformed SSE events
           }
         }
       }
     } catch (e: any) {
       setError(e.message || 'Generation failed')
-    } finally {
       setGenerating(false)
     }
   }
 
   return (
-    <div className="space-y-8">
-      <div className="text-center space-y-2">
-        <h1
-          className="text-3xl font-bold"
-          style={{ color: 'var(--accent)', fontFamily: 'Georgia, serif' }}
-        >
-          Create D&D Content
-        </h1>
-        <p style={{ color: 'var(--text-muted)' }}>
-          Generate unique weapons, NPCs, artifacts, locations, and monsters using AI
-        </p>
+    <>
+      {generating && <ConjuringRitual liveStatus={status} />}
+
+      <div className="stage desk-stage">
+        <div className="desk-panel parchment parch-edge">
+          <div className="corner tl"><CornerFlourish /></div>
+          <div className="corner tr"><CornerFlourish /></div>
+          <div className="corner bl"><CornerFlourish /></div>
+          <div className="corner br"><CornerFlourish /></div>
+          <div className="gilt" />
+
+          <div className="tome-inner desk-inner">
+            <p className="eyebrow desk-eyebrow">A Dungeon Master&rsquo;s Workshop</p>
+            <h1 className="codex-wordmark">The Artificer&rsquo;s Codex</h1>
+            <Fleuron />
+            <p className="desk-lede">
+              Name a thing, and the archives will conjure it &mdash; weapons, wanderers,
+              monsters and relics, each set down as a page of the great book.
+            </p>
+
+            <CategorySelector value={category} onChange={setCategory} />
+            <GeneratorForm
+              category={category}
+              onSubmit={handleGenerate}
+              disabled={generating}
+              onOpenCompendium={() => router.push('/gallery')}
+            />
+
+            {error && (
+              <p style={{ color: '#c04040', marginTop: '1rem', fontStyle: 'italic', fontSize: '.92rem' }}>
+                {error}
+              </p>
+            )}
+          </div>
+        </div>
       </div>
-
-      <hr className="gold-divider" />
-
-      <div
-        className="rounded-lg p-6 border space-y-6"
-        style={{ background: 'var(--bg-surface)', borderColor: 'var(--border)' }}
-      >
-        <CategorySelector value={category} onChange={setCategory} />
-        <GeneratorForm
-          category={category}
-          onSubmit={handleGenerate}
-          disabled={generating}
-        />
-      </div>
-
-      {generating && (
-        <div className="text-center space-y-3 py-8">
-          <div className="inline-block w-8 h-8 border-2 border-t-transparent rounded-full animate-spin"
-               style={{ borderColor: 'var(--accent)', borderTopColor: 'transparent' }} />
-          <p style={{ color: 'var(--text-muted)' }}>{status || 'Generating…'}</p>
-        </div>
-      )}
-
-      {error && (
-        <div
-          className="rounded p-4 border text-sm"
-          style={{ background: '#2a0a0a', borderColor: '#6a1a1a', color: '#ff8080' }}
-        >
-          {error}
-        </div>
-      )}
-
-      {result && !generating && (
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold" style={{ color: 'var(--accent)' }}>
-            Generated {category.charAt(0).toUpperCase() + category.slice(1)}
-          </h2>
-          <ContentCard item={result} category={category} expanded />
-        </div>
-      )}
-    </div>
+    </>
   )
 }

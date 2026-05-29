@@ -9,7 +9,7 @@ feel like it has a centuries-long story.
 Return the artifact as a JSON object with these exact fields:
 - name: string
 - source_category: "artifact"
-- image_prompt: string (DALL-E style prompt for the artifact's appearance)
+- image_prompt: string (visual description for image generation — include specific colours of metals, gems, materials and magical effects, e.g. "a blackened iron crown with guttering flame-peaks, a single uncut ruby at the brow with a slowly-turning mote of deep crimson fire inside")
 - artifact_type: string (Weapon of Legend, Armor, Ring, Crown, Amulet, Staff, etc.)
 - item_subtype: string or null (e.g., Longsword, Trident, Plate)
 - rarity: string (Legendary or Artifact)

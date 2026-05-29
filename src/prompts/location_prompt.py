@@ -9,7 +9,7 @@ history and geography in the Sword Coast setting.
 Return the location as a JSON object with these exact fields:
 - name: string
 - source_category: "location"
-- image_prompt: string (DALL-E style prompt for the location's appearance)
+- image_prompt: string (visual description for image generation — describe the location's specific colours and materials: stone colours, sky, vegetation, water, atmosphere, e.g. "a range of smouldering volcanic peaks, slopes cross-hatched with glowing orange fissures, veiled in pale grey ash-smoke, under a sulphur-yellow sky")
 - location_type: string (City, Town, Fortress, Tower, Ruin, Sacred Site, etc.)
 - region: string (where on the Sword Coast)
 - epithets: string or null (known titles or nicknames)

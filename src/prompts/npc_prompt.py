@@ -12,7 +12,7 @@ The encounter_hooks and rumors fields MUST be arrays of strings, not single stri
 {
   "name": string,
   "source_category": "npc",
-  "image_prompt": string (DALL-E style prompt),
+  "image_prompt": string (visual description for image generation — include the character's specific appearance: skin tone, hair colour, eye colour, notable features and clothing colours, e.g. "a broad-shouldered woman in her fifties, pale grey eyes, soot-darkened hands, wearing a worn leather apron over dark woollen clothes"),
   "archetype": string (Hero, Villain, Criminal, Guild Leader, Patron, etc.),
   "race": string,
   "gender": string,

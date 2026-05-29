@@ -14,7 +14,7 @@ names (do not rename fields even if the reference examples use different names):
 {
   "name": string,
   "source_category": "weapon",
-  "image_prompt": string (DALL-E style prompt for the weapon's appearance),
+  "image_prompt": string (visual description for image generation — describe the weapon's exact appearance including specific colours of materials, metals, gemstones, and finishes, e.g. "a charcoal-grey shortbow with ember-orange veins, obsidian grip shards, heat-darkened ashwood"),
   "item_type": string (e.g., "Weapon (longsword)", "Weapon (dagger)"),
   "rarity": string (Common, Uncommon, Rare, Very Rare, or Legendary),
   "requires_attunement": boolean,

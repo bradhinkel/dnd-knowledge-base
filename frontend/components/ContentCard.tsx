@@ -1,107 +1,57 @@
 'use client'
 
 import Link from 'next/link'
-import ImageDisplay from './ImageDisplay'
-import ContentDetail from './ContentDetail'
+import { CategoryGlyph } from './Ornaments'
+import { RARITIES, RarityTag } from './PageShell'
 
-const RARITY_CLASS: Record<string, string> = {
-  common: 'rarity-common',
-  uncommon: 'rarity-uncommon',
-  rare: 'rarity-rare',
-  'very rare': 'rarity-very-rare',
-  legendary: 'rarity-legendary',
-  artifact: 'rarity-artifact',
+interface Item {
+  id: string
+  category: string
+  name: string
+  rarity?: string
+  content: Record<string, any>
+  image_url?: string
+  created_at?: string
 }
 
 interface Props {
-  item: {
-    id: string
-    category: string
-    name: string
-    rarity?: string
-    content: Record<string, any>
-    image_url?: string
-    created_at?: string
-  }
-  category: string
-  expanded?: boolean
+  item: Item
+  pageNumber?: number
 }
 
-export default function ContentCard({ item, category, expanded = false }: Props) {
-  const rarityKey = item.rarity?.toLowerCase() ?? ''
-  const rarityClass = RARITY_CLASS[rarityKey] ?? 'rarity-common'
-
-  const description =
-    item.content.description ||
-    item.content.overview ||
-    item.content.backstory ||
-    item.content.lore_and_history ||
+export default function ContentCard({ item, pageNumber }: Props) {
+  const rarity = item.rarity?.toLowerCase() ?? 'common'
+  const r = RARITIES[rarity] ?? RARITIES.common
+  const subtitle =
+    item.content.subtitle ||
+    item.content.item_subtype ||
+    item.content.archetype ||
+    item.content.monster_type?.split(',')[0] ||
     ''
 
   return (
-    <div
-      className="rounded-lg border overflow-hidden hover:border-opacity-70 transition-all"
-      style={{ background: 'var(--bg-card)', borderColor: 'var(--border)' }}
+    <Link
+      href={`/item/${item.id}`}
+      className="comp-card parchment parch-edge"
+      style={{
+        '--accent': r.accent,
+        '--accent-bright': r.bright,
+        '--rarity': r.accent,
+        '--rarity-bright': r.bright,
+      } as React.CSSProperties}
     >
-      {item.image_url && (
-        <div className={expanded ? 'flex justify-center p-4' : 'w-full'}>
-          <div className={`aspect-square overflow-hidden ${expanded ? 'w-48' : 'w-full'}`}>
-            <ImageDisplay
-              src={item.image_url}
-              alt={item.name}
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
+      <div className="comp-card-edge" />
+      <span className="comp-emblem">
+        <CategoryGlyph kind={item.category} size={34} />
+      </span>
+      <span className="comp-name">{item.name}</span>
+      {subtitle && <span className="comp-sub">{subtitle}</span>}
+      <span className="comp-rarity">
+        <RarityTag rarity={rarity} />
+      </span>
+      {pageNumber != null && (
+        <span className="comp-page">p. {pageNumber}</span>
       )}
-
-      <div className="p-4 space-y-3">
-        <div className="flex items-start justify-between gap-2">
-          <h3
-            className="font-bold leading-tight"
-            style={{ color: 'var(--accent)', fontFamily: 'Georgia, serif',
-                     fontSize: expanded ? '1.25rem' : '1rem' }}
-          >
-            {expanded ? item.name : (
-              <Link href={`/item/${item.id}`} className="hover:underline">
-                {item.name}
-              </Link>
-            )}
-          </h3>
-          {item.rarity && (
-            <span
-              className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap text-white ${rarityClass}`}
-            >
-              {item.rarity}
-            </span>
-          )}
-        </div>
-
-        <p className="text-xs capitalize" style={{ color: 'var(--text-muted)' }}>
-          {category}
-        </p>
-
-        {!expanded && description && (
-          <p
-            className="text-sm line-clamp-3"
-            style={{ color: 'var(--text-primary)', opacity: 0.85 }}
-          >
-            {typeof description === 'string' ? description : ''}
-          </p>
-        )}
-
-        {expanded && <ContentDetail content={item.content} category={category} />}
-
-        {!expanded && (
-          <Link
-            href={`/item/${item.id}`}
-            className="text-xs hover:underline"
-            style={{ color: 'var(--accent)' }}
-          >
-            View full details →
-          </Link>
-        )}
-      </div>
-    </div>
+    </Link>
   )
 }

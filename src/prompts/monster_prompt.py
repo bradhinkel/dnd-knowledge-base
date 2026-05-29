@@ -9,7 +9,7 @@ the ecology and lore in the Sword Coast setting.
 Return the monster as a JSON object with these exact fields:
 - name: string
 - source_category: "monster"
-- image_prompt: string (DALL-E style prompt for the creature's appearance)
+- image_prompt: string (visual description for image generation — include the creature's specific colours of hide, scales, eyes, markings, and any distinctive features, e.g. "a lean ash-grey drake with ember-orange veins along its flanks, pale yellow slit eyes, obsidian-tipped claws")
 - monster_type: string (e.g., "Medium humanoid (human), lawful good")
 - challenge_rating: string (e.g., "5 (1800 XP)")
 - armor_class: string (e.g., "18 (plate armor and shield)")

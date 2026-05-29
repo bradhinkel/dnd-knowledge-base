@@ -13,6 +13,7 @@ from dotenv import load_dotenv
 from llama_index.core import Settings, VectorStoreIndex
 from llama_index.core.vector_stores import MetadataFilters, ExactMatchFilter
 from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.llms.anthropic import Anthropic as LlamaAnthropic
 from llama_index.vector_stores.chroma import ChromaVectorStore
 
 load_dotenv()
@@ -30,7 +31,9 @@ def _get_index() -> VectorStoreIndex:
     vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 
     Settings.embed_model = OpenAIEmbedding(model="text-embedding-3-small")
-    Settings.llm = None
+    # LlamaIndex requires a non-None LLM even for pure retrieval — without this
+    # it falls back to MockLLM and logs a warning on every query.
+    Settings.llm = LlamaAnthropic(model="claude-haiku-4-5-20251001")
 
     return VectorStoreIndex.from_vector_store(vector_store)
 

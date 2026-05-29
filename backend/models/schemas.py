@@ -1,18 +1,25 @@
 """Request / response Pydantic models for the FastAPI layer."""
 
 from typing import Any, Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+
+
+# Max length for any free-text input field.
+# Long inputs are a common prompt-injection vector; 120 chars is generous
+# for a D&D descriptor ("fire-touched volcanic ruins near Waterdeep") while
+# blocking anything that looks like instruction injection.
+_MAX = 120
 
 
 class GenerateRequest(BaseModel):
-    rarity: Optional[str] = None
-    theme: Optional[str] = None
-    location: Optional[str] = None
-    type: Optional[str] = None          # weapon type, monster type, etc.
-    char_class: Optional[str] = None    # NPC class
-    cr: Optional[str] = None            # monster CR
-    terrain: Optional[str] = None       # location terrain
-    name_hint: Optional[str] = None     # optional name suggestion
+    rarity:     Optional[str] = Field(None, max_length=_MAX)
+    theme:      Optional[str] = Field(None, max_length=_MAX)
+    location:   Optional[str] = Field(None, max_length=_MAX)
+    type:       Optional[str] = Field(None, max_length=_MAX)
+    char_class: Optional[str] = Field(None, max_length=_MAX)
+    cr:         Optional[str] = Field(None, max_length=20)   # "1/4" … "30"
+    terrain:    Optional[str] = Field(None, max_length=_MAX)
+    name_hint:  Optional[str] = Field(None, max_length=_MAX)
 
 
 class GeneratedItem(BaseModel):
@@ -33,10 +40,10 @@ class GalleryResponse(BaseModel):
 
 
 class ImageRequest(BaseModel):
-    prompt: str
+    prompt:  str = Field(..., max_length=500)
     item_id: Optional[str] = None
 
 
 class ImageResponse(BaseModel):
     image_url: str
-    item_id: Optional[str] = None
+    item_id:   Optional[str] = None

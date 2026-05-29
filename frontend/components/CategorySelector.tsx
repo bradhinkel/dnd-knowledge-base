@@ -1,11 +1,13 @@
 'use client'
 
-const CATEGORIES = [
-  { id: 'weapon',   label: 'Weapon',   icon: '⚔️' },
-  { id: 'npc',      label: 'NPC',      icon: '🧙' },
-  { id: 'artifact', label: 'Artifact', icon: '💎' },
-  { id: 'location', label: 'Location', icon: '🏰' },
-  { id: 'monster',  label: 'Monster',  icon: '🐉' },
+import { CategoryGlyph } from './Ornaments'
+
+export const CATEGORIES = [
+  { id: 'weapon',   label: 'Weapon',   tagline: 'Blades, bows & battle-gear' },
+  { id: 'npc',      label: 'Character', tagline: 'Allies, rivals & strangers' },
+  { id: 'monster',  label: 'Monster',  tagline: 'Beasts, horrors & dragons' },
+  { id: 'artifact', label: 'Artifact', tagline: 'Relics of lost ages' },
+  { id: 'location', label: 'Location', tagline: 'Realms, ruins & strongholds' },
 ]
 
 interface Props {
@@ -15,26 +17,21 @@ interface Props {
 
 export default function CategorySelector({ value, onChange }: Props) {
   return (
-    <div className="space-y-2">
-      <label className="text-sm font-medium" style={{ color: 'var(--text-muted)' }}>
-        Category
-      </label>
-      <div className="flex flex-wrap gap-2">
+    <div>
+      <p className="field-legend">Choose a Discipline</p>
+      <div className="cat-row">
         {CATEGORIES.map(cat => (
           <button
             key={cat.id}
             type="button"
             onClick={() => onChange(cat.id)}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all"
-            style={{
-              background: value === cat.id ? 'var(--accent)' : 'var(--bg-card)',
-              color: value === cat.id ? '#0f0f1a' : 'var(--text-primary)',
-              border: `1px solid ${value === cat.id ? 'var(--accent)' : 'var(--border)'}`,
-              fontWeight: value === cat.id ? '700' : '500',
-            }}
+            className={`cat-card${value === cat.id ? ' on' : ''}`}
           >
-            <span>{cat.icon}</span>
-            <span>{cat.label}</span>
+            <span className="cat-ico">
+              <CategoryGlyph kind={cat.id} size={28} />
+            </span>
+            <span className="cat-label">{cat.label}</span>
+            <span className="cat-tag">{cat.tagline}</span>
           </button>
         ))}
       </div>

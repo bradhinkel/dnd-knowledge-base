@@ -1,40 +1,28 @@
 import type { Metadata } from 'next'
-import './globals.css'
 import IframeResizer from '@/components/IframeResizer'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'D&D Content Generator',
-  description: 'AI-powered Dungeons & Dragons content generator powered by RAG',
+  title: "The Artificer's Codex",
+  description: 'An illuminated tome of AI-conjured D&D content — weapons, monsters, NPCs, artifacts, and locations.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
         <IframeResizer />
-        <main className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
-          <nav
-            className="border-b px-6 py-4 flex items-center justify-between"
-            style={{ borderColor: 'var(--border)', background: 'var(--bg-surface)' }}
-          >
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">⚔️</span>
-              <span
-                className="text-xl font-bold tracking-wide"
-                style={{ color: 'var(--accent)', fontFamily: 'Georgia, serif' }}
-              >
-                D&D Content Generator
-              </span>
-            </div>
-            <nav className="flex gap-6 text-sm" style={{ color: 'var(--text-muted)' }}>
-              <a href="/" className="hover:text-white transition-colors">Generate</a>
-              <a href="/gallery" className="hover:text-white transition-colors">Gallery</a>
-            </nav>
-          </nav>
-          <div className="px-4 py-6 max-w-5xl mx-auto">
-            {children}
-          </div>
-        </main>
+        <div className="room">
+          {children}
+        </div>
       </body>
     </html>
   )

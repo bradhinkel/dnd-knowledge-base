@@ -6,39 +6,40 @@ interface Field {
   name: string
   label: string
   placeholder?: string
+  type?: 'select'
   options?: string[]
 }
 
-const CATEGORY_FIELDS: Record<string, Field[]> = {
+export const CATEGORY_FIELDS: Record<string, Field[]> = {
   weapon: [
-    { name: 'rarity', label: 'Rarity', options: ['Common', 'Uncommon', 'Rare', 'Very Rare', 'Legendary'] },
-    { name: 'type', label: 'Weapon Type', placeholder: 'e.g. Longsword, Dagger, Bow' },
-    { name: 'theme', label: 'Theme', placeholder: 'e.g. lightning, shadow, frost' },
-    { name: 'location', label: 'Location / Origin', placeholder: 'e.g. Waterdeep, Underdark' },
+    { name: 'rarity', label: 'Rarity', type: 'select', options: ['Common','Uncommon','Rare','Very Rare','Legendary'] },
+    { name: 'type',   label: 'Weapon Type', placeholder: 'e.g. Shortbow, Longsword, Dagger' },
+    { name: 'theme',  label: 'Theme', placeholder: 'e.g. volcanic fire, frost, shadow' },
+    { name: 'location', label: 'Origin', placeholder: 'e.g. the Smoking Mountains' },
   ],
   npc: [
-    { name: 'char_class', label: 'Class', placeholder: 'e.g. Wizard, Rogue, Paladin' },
-    { name: 'rarity', label: 'Importance', options: ['Minor', 'Notable', 'Major', 'Legendary'] },
-    { name: 'theme', label: 'Theme / Personality', placeholder: 'e.g. villain, mentor, trickster' },
-    { name: 'location', label: 'Location', placeholder: 'e.g. Silverymoon, Baldur\'s Gate' },
-  ],
-  artifact: [
-    { name: 'rarity', label: 'Rarity', options: ['Rare', 'Very Rare', 'Legendary', 'Artifact'] },
-    { name: 'type', label: 'Item Type', placeholder: 'e.g. ring, cloak, sword, mirror' },
-    { name: 'theme', label: 'Theme', placeholder: 'e.g. shadow, divine, nature, undead' },
-    { name: 'location', label: 'Associated Location', placeholder: 'e.g. Candlekeep, Undermountain' },
-  ],
-  location: [
-    { name: 'type', label: 'Location Type', placeholder: 'e.g. city, dungeon, forest, ruins' },
-    { name: 'terrain', label: 'Terrain', placeholder: 'e.g. coastal, mountain, underground' },
-    { name: 'theme', label: 'Theme / Atmosphere', placeholder: 'e.g. political intrigue, ancient evil' },
-    { name: 'rarity', label: 'Scale', options: ['Village', 'Town', 'City', 'Metropolis', 'Landmark'] },
+    { name: 'char_class', label: 'Calling', placeholder: 'e.g. Bowyer, Wizard, Rogue' },
+    { name: 'rarity',     label: 'Renown', type: 'select', options: ['Common','Uncommon','Rare','Legendary'] },
+    { name: 'theme',      label: 'Disposition', placeholder: 'e.g. mentor, schemer, recluse' },
+    { name: 'location',   label: 'Home', placeholder: 'e.g. Waterdeep' },
   ],
   monster: [
-    { name: 'cr', label: 'Challenge Rating', placeholder: 'e.g. 1, 5, 10, 15, 20' },
-    { name: 'type', label: 'Creature Type', placeholder: 'e.g. undead, dragon, humanoid, aberration' },
-    { name: 'theme', label: 'Theme', placeholder: 'e.g. psionic, shadow, fire, frost' },
-    { name: 'location', label: 'Habitat', placeholder: 'e.g. Underdark, coastal, forest' },
+    { name: 'cr',       label: 'Challenge Rating', placeholder: 'e.g. 1, 6, 12, 20' },
+    { name: 'type',     label: 'Creature Type', placeholder: 'e.g. dragon, undead, fiend' },
+    { name: 'theme',    label: 'Theme', placeholder: 'e.g. fire, decay, the deep' },
+    { name: 'location', label: 'Habitat', placeholder: 'e.g. volcanic caverns' },
+  ],
+  artifact: [
+    { name: 'rarity',   label: 'Rarity', type: 'select', options: ['Very Rare','Legendary','Artifact'] },
+    { name: 'type',     label: 'Form', placeholder: 'e.g. crown, mirror, tome' },
+    { name: 'theme',    label: 'Theme', placeholder: 'e.g. divine, undeath, flame' },
+    { name: 'location', label: 'Bound to', placeholder: 'e.g. Candlekeep' },
+  ],
+  location: [
+    { name: 'type',     label: 'Kind', placeholder: 'e.g. city, dungeon, range' },
+    { name: 'terrain',  label: 'Terrain', placeholder: 'e.g. volcanic, coastal' },
+    { name: 'theme',    label: 'Atmosphere', placeholder: 'e.g. restless, sacred' },
+    { name: 'rarity',   label: 'Scale', type: 'select', options: ['Landmark','Village','Town','City','Region'] },
   ],
 }
 
@@ -46,16 +47,15 @@ interface Props {
   category: string
   onSubmit: (params: Record<string, string>) => void
   disabled?: boolean
+  savedCount?: number
+  onOpenCompendium?: () => void
 }
 
-export default function GeneratorForm({ category, onSubmit, disabled }: Props) {
+export default function GeneratorForm({ category, onSubmit, disabled, savedCount, onOpenCompendium }: Props) {
   const fields = CATEGORY_FIELDS[category] || []
   const [values, setValues] = useState<Record<string, string>>({})
 
-  // Reset form when category changes
-  useEffect(() => {
-    setValues({})
-  }, [category])
+  useEffect(() => { setValues({}) }, [category])
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -67,61 +67,49 @@ export default function GeneratorForm({ category, onSubmit, disabled }: Props) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid gap-4 sm:grid-cols-2">
+    <form onSubmit={handleSubmit}>
+      <div className="field-grid">
         {fields.map(field => (
-          <div key={field.name} className="space-y-1">
-            <label className="text-sm" style={{ color: 'var(--text-muted)' }}>
-              {field.label}
-            </label>
-            {field.options ? (
+          <div className="field" key={field.name}>
+            <label htmlFor={`field-${field.name}`}>{field.label}</label>
+            {field.type === 'select' ? (
               <select
+                id={`field-${field.name}`}
                 value={values[field.name] || ''}
                 onChange={e => setValues(prev => ({ ...prev, [field.name]: e.target.value }))}
                 disabled={disabled}
-                className="w-full px-3 py-2 rounded text-sm"
-                style={{
-                  background: 'var(--bg-card)',
-                  border: '1px solid var(--border)',
-                  color: 'var(--text-primary)',
-                }}
               >
                 <option value="">Any</option>
-                {field.options.map(opt => (
+                {field.options!.map(opt => (
                   <option key={opt} value={opt.toLowerCase()}>{opt}</option>
                 ))}
               </select>
             ) : (
               <input
+                id={`field-${field.name}`}
                 type="text"
                 value={values[field.name] || ''}
                 onChange={e => setValues(prev => ({ ...prev, [field.name]: e.target.value }))}
                 placeholder={field.placeholder}
+                maxLength={120}
                 disabled={disabled}
-                className="w-full px-3 py-2 rounded text-sm"
-                style={{
-                  background: 'var(--bg-card)',
-                  border: '1px solid var(--border)',
-                  color: 'var(--text-primary)',
-                }}
               />
             )}
           </div>
         ))}
       </div>
 
-      <button
-        type="submit"
-        disabled={disabled}
-        className="w-full py-3 rounded-lg font-semibold text-sm transition-all disabled:opacity-50"
-        style={{
-          background: disabled ? 'var(--border)' : 'var(--accent)',
-          color: '#0f0f1a',
-          cursor: disabled ? 'not-allowed' : 'pointer',
-        }}
-      >
-        {disabled ? 'Generating…' : `Generate ${category.charAt(0).toUpperCase() + category.slice(1)}`}
-      </button>
+      <div className="desk-actions">
+        <button type="submit" className="conjure-btn" disabled={disabled}>
+          <span className="cb-ring" aria-hidden="true" />
+          <span className="cb-label">{disabled ? 'Conjuring…' : 'Conjure'}</span>
+        </button>
+        {onOpenCompendium && (
+          <button type="button" className="btn ghost" onClick={onOpenCompendium}>
+            The Compendium{savedCount ? ` · ${savedCount}` : ''}
+          </button>
+        )}
+      </div>
     </form>
   )
 }

@@ -596,4 +596,52 @@ body {
   .room::before { display: none; }
   .codex-bar { display: none; }
   .tome-page { box-shadow: none !important; }
+  .about-box { display: none !important; }
+}
+
+/* ============================================================
+   ABOUT BOX (home desk view)
+   ============================================================ */
+.about-box { padding: 0 20px 34px; max-width: 980px; margin: 0 auto; }
+.about-sheet { padding: 26px 30px 36px; border-radius: 16px; }
+.about-head { margin-bottom: 1.1rem; }
+.about-portrait {
+  float: right; width: min(220px, 40%); margin: 0 0 1rem 1.25rem;
+  shape-outside: circle(50%);
+  clip-path: circle(50%);
+  shape-margin: .8rem;
+}
+.about-portrait img {
+  width: 100%; display: block; border-radius: 14px; border: 1px solid rgba(74, 40, 12, .32);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, .24);
+  margin-bottom: .5rem;
+}
+.about-portrait figcaption {
+  margin-top: 0; font-size: .78rem; color: var(--ink-soft); line-height: 1.1;
+  white-space: nowrap;
+}
+.about-content { display: grid; gap: 1rem; }
+@media (max-width: 900px) {
+  .about-portrait { float: none; width: 100%; margin: 0 0 1rem 0; shape-outside: none; clip-path: none; }
+}
+@media (min-width: 900px) {
+  .about-content { grid-template-columns: 1.65fr .95fr; }
+}
+.about-meta { display: grid; gap: .95rem; }
+.about-stat {
+  padding: 1rem 1rem 1.05rem;
+  border: 1px solid rgba(138, 106, 44, .22);
+  border-radius: 12px; background: rgba(255, 255, 255, .18);
+}
+.about-stat strong {
+  display: block; margin-bottom: .32rem; color: var(--accent);
+  letter-spacing: .08em; text-transform: uppercase; font-size: .78rem;
+}
+.about-stat span,
+.about-stat a { font-size: 1rem; line-height: 1.45; color: var(--ink); }
+.about-stat a { text-decoration: underline; text-decoration-color: rgba(106, 29, 21, .25); }
+.about-box .dropcap::first-letter {
+  font-family: var(--decoro); float: left; font-size: 3.5rem; line-height: .76;
+  padding: .1rem .12rem .05rem 0; margin: .08rem .12rem 0 0;
+  color: var(--accent); text-shadow: 0 1px 0 rgba(255, 255, 255, .35);
 }

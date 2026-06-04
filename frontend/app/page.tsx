@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import CategorySelector from '@/components/CategorySelector'
 import GeneratorForm from '@/components/GeneratorForm'
 import ConjuringRitual from '@/components/ConjuringRitual'
+import AboutBox from '@/components/AboutBox'
 import { Fleuron, CornerFlourish } from '@/components/Ornaments'
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || '/api'
@@ -106,6 +107,8 @@ export default function GeneratorPage() {
             )}
           </div>
         </div>
+
+        <AboutBox />
       </div>
     </>
   )

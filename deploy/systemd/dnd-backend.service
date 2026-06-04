@@ -7,7 +7,7 @@ Wants=postgresql.service
 Type=simple
 User=www-data
 Group=www-data
-WorkingDirectory=/opt/dnd-knowledge-base/backend
+WorkingDirectory=/opt/dnd-knowledge-base
 Environment=PATH=/opt/dnd-knowledge-base/venv/bin
 EnvironmentFile=/opt/dnd-knowledge-base/.env
 ExecStart=/opt/dnd-knowledge-base/venv/bin/uvicorn backend.main:app \

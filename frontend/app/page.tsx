@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import CategorySelector from '@/components/CategorySelector'
 import GeneratorForm from '@/components/GeneratorForm'
-import ConjuringRitual from '@/components/ConjuringRitual'
+import ConjuringRitual, { Embers } from '@/components/ConjuringRitual'
 import AboutBox from '@/components/AboutBox'
 import { Fleuron, CornerFlourish } from '@/components/Ornaments'
 
@@ -107,9 +107,13 @@ export default function GeneratorPage() {
             )}
           </div>
         </div>
-
-        <AboutBox />
       </div>
+
+      <div className="ember-gap no-print" aria-hidden="true">
+        <Embers count={22} />
+      </div>
+
+      <AboutBox />
     </>
   )
 }

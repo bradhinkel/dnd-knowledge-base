@@ -600,9 +600,14 @@ body {
 }
 
 /* ============================================================
+   EMBER GAP (breathing room between desk and about box)
+   ============================================================ */
+.ember-gap { position: relative; height: 2in; overflow: hidden; pointer-events: none; }
+
+/* ============================================================
    ABOUT BOX (home desk view)
    ============================================================ */
-.about-box { padding: 0 20px 34px; max-width: 980px; margin: 0 auto; }
+.about-box { padding: 0 20px 64px; max-width: 980px; margin: 0 auto; }
 .about-sheet { padding: 26px 30px 36px; border-radius: 16px; }
 .about-head { margin-bottom: 1.1rem; }
 .about-portrait {
